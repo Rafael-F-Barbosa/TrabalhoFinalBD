@@ -7,6 +7,7 @@ mydb = mysql.connector.connect(
     database="mydatabase"
 )
 
+#oi amigo
 
 mycursor = mydb.cursor()
 
