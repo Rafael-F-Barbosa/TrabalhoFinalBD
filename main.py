@@ -1,35 +1,18 @@
-import mysql.connector
+import mysql.connector.pooling
+
 from model.RegioesAdmin import RegioesAdmin
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Qaz1234!",
-    database="mydatabase"
-)
 
-#oi amigo
-# oi
+dbconfig = {
+    "host": "localhost",
+    "user": "root",
+    "password": "Qaz1234!",
+    "database": "BancoCovid",
+}
 
-mycursor = mydb.cursor()
+RegioesAdmin.AdicionaRegiaoAdmin(dbconfig, 'Brasilia', 500)
 
+RegioesAdmin.AdicionaRegiaoAdmin(dbconfig, 'Planaltina', 30000)
 
-brasilia = RegioesAdmin(1, 'Brasilia',30000)
-print(brasilia.nome)
+RegioesAdmin.AdicionaRegiaoAdmin(dbconfig, 'Sobral', 30000)
 
-
-# CREATING A DATABASE
-# mycursor.execute("CREATE DATABASE mydatabase")
-
-# SHOWING ALL DATABASES IN THIS SERVER
-mycursor.execute("SHOW DATABASES")
-for x in mycursor:
-  print(x)
-
-# # CREATING A TABLE IN MYSQL
-# mycursor.execute("SHOW TABLES")
-# for x in mycursor:
-#   print(x)
-# mycursor.execute(
-#     "CREATE TABLE IF NOT EXISTS customers (name VARCHAR(255), address VARCHAR(255))")
-# mycursor.execute(
-#     "CREATE TABLE IF NOT EXISTS owners (name VARCHAR(255), address VARCHAR(255))")
+print(RegioesAdmin.ListaTodasRegioesAdmin(dbconfig))
