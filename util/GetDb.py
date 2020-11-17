@@ -1,6 +1,12 @@
 import mysql.connector
 
-def findDb(dbconfig):
+def CreatePool():
+    dbconfig = {
+        "host": "localhost",
+        "user": "root",
+        "password": "Qaz1234!",
+        "database": "BancoCovid",
+    }
     pool = mysql.connector.pooling.MySQLConnectionPool(
         pool_name="my_pool",
         pool_size=1,
