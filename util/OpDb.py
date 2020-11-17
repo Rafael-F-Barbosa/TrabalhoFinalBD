@@ -1,5 +1,8 @@
 import mysql.connector.pooling
+from mysql.connector import Error
+
 from .GetDb import CreatePool
+
 
 # Aqui tem operações no banco de dados que podem ser reutilizadas.
 
@@ -37,5 +40,8 @@ def InsereTudo(tabela, dicio):
     print('Operacao: ', sql)
     
     # Inserindo na Tabela
-    cursor.execute(sql, tuple(val))
-    conn.commit()
+    try: 
+        cursor.execute(sql, tuple(val))
+        conn.commit()
+    except Error as err:
+        print("Deu ruim: {}".format(err))

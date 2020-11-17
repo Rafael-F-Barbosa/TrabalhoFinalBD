@@ -23,6 +23,6 @@ from entidades.Pacientes import Paciente
 # print(Hospital.ListaTudoHospitais())
 
 
-# Pacientes
+# # Pacientes
 Paciente.AdicionaPaciente("18229735114", "Reifael", "1998-09-21", 1)
 print(Paciente.ListaTodosPacientes())
