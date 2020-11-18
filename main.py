@@ -6,6 +6,11 @@ from entidades.Pacientes import Paciente
 from entidades.Testes import Testes
 from entidades.TestesPacientes import TestesPacientes
 from entidades.Sintomas import Sintomas
+from entidades.SintomasPacientes import SintomasPacientes
+from entidades.Medicacoes import Medicacoes
+from entidades.MedicacoesPacientes import MedicacoesPacientes
+from entidades.ProfissionaisSaude import ProfissionaisSaude
+
 # RegioesAdmin
 # RegioesAdmin.AdicionaRegiaoAdmin('Aguas Claras', 50000)
 # print(RegioesAdmin.ListaTodasRegioesAdmin())
@@ -41,3 +46,18 @@ from entidades.Sintomas import Sintomas
 # Sintomas.AdicionaSintomas("Febre", "Fisico")
 # print(Sintomas.ListaSintomas())
 
+# SintomasPacientes
+# SintomasPacientes.AdicionaSintomasPacientes("2020-10-17", 1, '18229735114')
+# print(SintomasPacientes.ListaSintomasPacientes())
+
+# Medicacoes
+# Medicacoes.AdicionaMedicacoes("Ozônio")
+# print(Medicacoes.ListaMedicacoes())
+
+# TestesPacientes
+# MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-17", '50g',1,'18229735114')
+# print(MedicacoesPacientes.ListaMedicacoesPacientes())
+
+# ProfissionaisSaude
+# ProfissionaisSaude.AdicionaProfissionaisSaude("18229735115", "Nina Pinho", "Médica", 0) 
+# print(ProfissionaisSaude.ListaProfissionaisSaude())
