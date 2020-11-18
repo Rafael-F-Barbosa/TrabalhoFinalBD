@@ -3,7 +3,9 @@ from entidades.SituacaoAtual import SituacaoAtual
 from entidades.Acoes import Acoes
 from entidades.Hospitais import Hospitais as Hospital
 from entidades.Pacientes import Paciente
-
+from entidades.Testes import Testes
+from entidades.TestesPacientes import TestesPacientes
+from entidades.Sintomas import Sintomas
 # RegioesAdmin
 # RegioesAdmin.AdicionaRegiaoAdmin('Aguas Claras', 50000)
 # print(RegioesAdmin.ListaTodasRegioesAdmin())
@@ -23,6 +25,19 @@ from entidades.Pacientes import Paciente
 # print(Hospital.ListaTudoHospitais())
 
 
-# # Pacientes
-Paciente.AdicionaPaciente("18229735114", "Reifael", "1998-09-21", 1)
-print(Paciente.ListaTodosPacientes())
+# Pacientes
+# Paciente.AdicionaPaciente("18229735114", "Reifael", "1998-09-21", 1) # tentando inserir o mesmo CPF pra testar erros
+# print(Paciente.ListaTodosPacientes())
+
+# Testes
+# Testes.AdicionaTestes("PCR")
+# print(Testes.ListaTestes())
+
+# TestesPacientes
+# TestesPacientes.AdicionaTestesPacientes("2020-11-17", 0, 1, '18229735114')
+# print(TestesPacientes.ListaTestesPacientes())
+
+# Sintomas
+# Sintomas.AdicionaSintomas("Febre", "Fisico")
+# print(Sintomas.ListaSintomas())
+
