@@ -10,7 +10,10 @@ from entidades.SintomasPacientes import SintomasPacientes
 from entidades.Medicacoes import Medicacoes
 from entidades.MedicacoesPacientes import MedicacoesPacientes
 from entidades.ProfissionaisSaude import ProfissionaisSaude
-
+from entidades.ProfTrabalhaHospital import ProfTrabalhaHospital
+from entidades.ProfAtendePaciente import ProfAtendePaciente
+from entidades.Parentes import Parente
+from entidades.ParentePaciente import ParentePaciente
 # RegioesAdmin
 # RegioesAdmin.AdicionaRegiaoAdmin('Aguas Claras', 50000)
 # print(RegioesAdmin.ListaTodasRegioesAdmin())
@@ -54,10 +57,27 @@ from entidades.ProfissionaisSaude import ProfissionaisSaude
 # Medicacoes.AdicionaMedicacoes("Ozônio")
 # print(Medicacoes.ListaMedicacoes())
 
-# TestesPacientes
+# Medicacoes Pacientes
 # MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-17", '50g',1,'18229735114')
 # print(MedicacoesPacientes.ListaMedicacoesPacientes())
 
 # ProfissionaisSaude
 # ProfissionaisSaude.AdicionaProfissionaisSaude("18229735115", "Nina Pinho", "Médica", 0) 
 # print(ProfissionaisSaude.ListaProfissionaisSaude())
+
+# ProfTrabalhaHospital
+# ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(1, '18229735115')
+# print(ProfTrabalhaHospital.ListaProfTrabalhaHospital())
+
+# ProfAtendePaciente
+# ProfAtendePaciente.AdicionaProfAtendePaciente('18229735114', '18229735115')
+# print(ProfAtendePaciente.ListaProfAtendePaciente())
+
+
+# Parente
+# Parente.AdicionaParente("18229755545", "Nina", "1999-04-05", 0) 
+# print(Parente.ListaTodosParentes())
+
+# ParentePacientes
+ParentePaciente.AdicionaParentePaciente('18229735114', '18229755545')
+print(ParentePaciente.ListaParentePaciente())
