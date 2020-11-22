@@ -5,15 +5,15 @@ from .GetDb import CreatePool
 
 
 # Aqui tem operações no banco de dados que podem ser reutilizadas.
-
 def SelecionaTudo(tabela):
     # Banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
-    
+
     # Faz a busca SQL
     sql = "select * from "+ tabela
     print('Operacao: ', sql)
+
     cursor.execute(sql);
 
     # Coloca items buscados em uma lista
@@ -38,7 +38,6 @@ def InsereTudo(tabela, dicio):
     valores = valores[:-2] + ')'
     sql = "INSERT INTO "+ tabela + colunas + " VALUES " + valores
     print('Operacao: ', sql)
-    
     # Inserindo na Tabela
     try: 
         cursor.execute(sql, tuple(val))

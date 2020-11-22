@@ -1,5 +1,5 @@
 import os
-
+from views.adicionar_dados import *
 
 def main():
     sair = False;
@@ -68,16 +68,22 @@ def dec_adicionar_dados():
 
     if(decisao == 0):
         return False
+
     elif(decisao == 1):
-        print(decisao)
+        return AdcionarRegiaoAdmin()
+
     elif(decisao == 2):
-        print(decisao)
+        return SituacaoAtual()
+
     elif(decisao == 3):
         print(decisao)
+
     elif(decisao == 4):
         print(decisao)
+
     elif(decisao == 5):
         print(decisao)
+
     elif(decisao == 6):
         print(decisao)
 

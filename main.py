@@ -21,6 +21,8 @@ from views.telas import main
 
 
 
+
+
 # -----------------------------------------------------------------------
 
 # Estou triste com isso, mas acho que é melhor não fazer interface gráfica
@@ -49,6 +51,10 @@ from views.telas import main
 # -----------------------------------------------------------------------
 
 # MAIN
+
+# RegioesAdmin.AdicionaRegiaoAdmin('Aguas Claras', 50000)
+print(RegioesAdmin.ListaTodasRegioesAdmin())
+a = input('')
 main()
 
 

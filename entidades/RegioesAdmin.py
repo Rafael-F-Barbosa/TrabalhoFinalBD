@@ -13,4 +13,3 @@ class RegioesAdmin:
         dicioRegiao['nome'] = nome
         dicioRegiao['populacao'] = populacao
         OpDb.InsereTudo('RegiaoAdmin', dicioRegiao)
-
