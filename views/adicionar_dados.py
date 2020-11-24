@@ -21,7 +21,7 @@ def AdcionarSituacaoAtual():
         try:
             data         = str(input("Nome da regiao: "))
             casos_leves  = int(input("Populacao: "))
-            casos_graves =  
+            # casos_graves =  
             SituacaoAtual.AdicionaSituacaoAtual(nome, populacao)
             break
         except:
