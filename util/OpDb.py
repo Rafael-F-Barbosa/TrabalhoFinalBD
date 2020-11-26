@@ -53,7 +53,7 @@ def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
     cursor = conn.cursor()
 
     # Criando SQL
-    sql = "UPDATE "+ tabela + " SET " + coluna1 + " = " + valor1 + " WHERE " + coluna2 + " = " + valor2
+    sql = "UPDATE "+ tabela + " SET " + coluna1 + " = '" + valor1 + "' WHERE " + coluna2 + " = " + valor2
     print('Operacao: ', sql)
     a = input("")
     # Inserindo na Tabela
@@ -62,3 +62,5 @@ def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
         conn.commit()
     except Error as err:
         print("Deu ruim: {}".format(err))
+        a = input("")
+

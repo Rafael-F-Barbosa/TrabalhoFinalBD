@@ -227,33 +227,33 @@ def dec_atualizar_dados():
         return False
 
     elif(decisao == 1):
-        return AdicionarRegiaoAdmin()
+        return AtualizarRegiao()
 
     elif(decisao == 2):
-        return AdicionarSituacaoAtual()
+        return AtualizarSituacao()
 
     elif(decisao == 3):
         return AtualizarAcao()
 
     elif(decisao == 4):
-        return AdicionarHospital()
+        return AtualizarHospital()
 
     elif(decisao == 5):
-        return AdicionarPaciente()
+        return AtualizarPaciente()
 
     elif(decisao == 6):
-        return AdicionarTeste()
+        return AtualizarTestes()
 
     elif(decisao == 7):
-        return AdicionarSintoma()
+        return AtualizarSintomas()
 
     elif(decisao == 8):
-        return AdicionarMedicacao()
+        return AtualizarMedicacao()
 
     elif(decisao == 9):
-        return AdicionarProfissional()
+        return AtualizarProfissional()
 
     elif(decisao == 10):
-        return AdicionarParente()
+        return AtualizarParente()
 
     return False
