@@ -166,7 +166,7 @@ def dec_adicionar_relacoes():
     while(True):
         try:
             decisao = int(input(""))
-            if(decisao in [0, 1, 2, 3, 4, 5, 6, 7]):
+            if(decisao in [0, 1, 2, 3, 4, 5, 6]):
                 break
         except:
             print("Entrada inválida")
@@ -175,24 +175,22 @@ def dec_adicionar_relacoes():
         return False
 
     elif(decisao == 1):
-        return AdcionarRegiaoAdmin()
+        return AdicionarParentesPacientes()
 
     elif(decisao == 2):
-        return SituacaoAtual()
+        return AdicionarProfissionaisPacientes()
 
     elif(decisao == 3):
-        print(decisao)
+        return AdicionarProfissionaisHospitais()
 
     elif(decisao == 4):
-        print(decisao)
+        return AdicionarPacientesMedicacoes()
 
     elif(decisao == 5):
-        print(decisao)
+        return AdicionarPacientesSintomas()
 
     elif(decisao == 6):
-        print(decisao)
+        return AdicionarPacientesTestes()
 
-    elif(decisao == 7):
-        print(decisao)
 
     return False
