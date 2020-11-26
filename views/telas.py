@@ -2,6 +2,7 @@ import os
 from views.adicionar_dados import *
 from views.adicionar_relacoes import *
 from views.atualizar_dados import *
+from views.selecionar_tabelas import *
 
 
 
