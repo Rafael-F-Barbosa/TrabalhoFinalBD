@@ -27,6 +27,12 @@ from views.telas import main
 # print(RegioesAdmin.ListaTodasRegioesAdmin())
 # a = input('')
 
+# RegioesAdmin
+
+RegioesAdmin.AdicionaRegiaoAdmin('Aguas Claras', 50000)
+print(RegioesAdmin.ListaTodasRegioesAdmin())
+
+
 main()
 
 

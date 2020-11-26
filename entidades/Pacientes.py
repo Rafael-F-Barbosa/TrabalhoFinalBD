@@ -11,9 +11,9 @@ class Paciente:
         return OpDb.SelecionaTudo('Pacientes')
 
     def AdicionaPaciente(cpf, nome, dataNascimento, codHospital):
-        dicioRegiao = {}
-        dicioRegiao['Cpf'] = cpf
-        dicioRegiao['Nome'] = nome
-        dicioRegiao['DataNascimento'] = dataNascimento
-        dicioRegiao['CodHospital'] = codHospital
-        OpDb.InsereTudo('Pacientes', dicioRegiao)
+        dicioPaciente = {}
+        dicioPaciente['Cpf'] = cpf
+        dicioPaciente['Nome'] = nome
+        dicioPaciente['DataNascimento'] = dataNascimento
+        dicioPaciente['CodHospital'] = codHospital
+        OpDb.InsereTudo('Pacientes', dicioPaciente)

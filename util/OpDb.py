@@ -14,7 +14,7 @@ def SelecionaTudo(tabela):
     sql = "select * from "+ tabela
     print('Operacao: ', sql)
 
-    cursor.execute(sql);
+    cursor.execute(sql)
 
     # Coloca items buscados em uma lista
     lista = cursor.fetchall()
@@ -38,6 +38,7 @@ def InsereTudo(tabela, dicio):
     valores = valores[:-2] + ')'
     sql = "INSERT INTO "+ tabela + colunas + " VALUES " + valores
     print('Operacao: ', sql)
+    a = input("")
     # Inserindo na Tabela
     try: 
         cursor.execute(sql, tuple(val))

@@ -109,7 +109,7 @@ def dec_adicionar_dados():
     while(True):
         try:
             decisao = int(input(""))
-            if(decisao in [0, 1, 2, 3, 4, 5, 6, 8, 9, 10]):
+            if(decisao in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]):
                 break
         except:
             print("Entrada inválida")
@@ -121,19 +121,31 @@ def dec_adicionar_dados():
         return AdcionarRegiaoAdmin()
 
     elif(decisao == 2):
-        return SituacaoAtual()
+        return AdicionarSituacaoAtual()
 
     elif(decisao == 3):
-        print(decisao)
+        return AdicionarAcao()
 
     elif(decisao == 4):
-        print(decisao)
+        return AdicionarHospital()
 
     elif(decisao == 5):
-        print(decisao)
+        return AdicionarPaciente()
 
     elif(decisao == 6):
-        print(decisao)
+        return AdicionarTeste()
+
+    elif(decisao == 7):
+        return AdicionarSintoma()
+
+    elif(decisao == 8):
+        return AdicionarMedicacao()
+
+    elif(decisao == 9):
+        return AdicionarProfissional()
+
+    elif(decisao == 10):
+        return AdicionarParente()
 
     return False
 
