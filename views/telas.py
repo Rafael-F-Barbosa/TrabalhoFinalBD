@@ -1,12 +1,15 @@
 import os
 from views.adicionar_dados import *
 from views.adicionar_relacoes import *
+from views.atualizar_dados import *
+
 
 
 def main():
     sair = False
     while(sair == False):
         os.system('cls' if os.name == 'nt' else 'clear')
+        
         print("\t\tBANCO DE DADOS\n\t\t   COVID19\n")
         print("Pressione enter para começar.")
         a = input('')
@@ -42,7 +45,7 @@ def dec_apresenta_funcionalidades():
         elif(decisao == 3):
             sair = dec_adicionar_relacoes()
         elif(decisao == 4):
-            sair = dec_atualizar_dados() # Arrumar 
+            sair = dec_atualizar_dados()
         elif(decisao == 5):
             sair = dec_adicionar_dados() # Arrumar 
         elif(decisao == 6):
@@ -90,7 +93,7 @@ def dec_ver_informacoes():
 
     return False
 
-# decide em qual tabela será feita a adição - Incompleto
+# decide em qual tabela será feita a adição
 def dec_adicionar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -118,7 +121,7 @@ def dec_adicionar_dados():
         return False
 
     elif(decisao == 1):
-        return AdcionarRegiaoAdmin()
+        return AdicionarRegiaoAdmin()
 
     elif(decisao == 2):
         return AdicionarSituacaoAtual()
@@ -151,7 +154,6 @@ def dec_adicionar_dados():
 
 
 # decide em qual tabela será feita a adição de relacao
-# Não implementado
 def dec_adicionar_relacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -192,5 +194,66 @@ def dec_adicionar_relacoes():
     elif(decisao == 6):
         return AdicionarPacientesTestes()
 
+
+    return False
+
+
+# decide em qual tabela será feita a atualização 
+# nao implementado
+def dec_atualizar_dados():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("O que você deseja fazer ")
+    print("0 - Voltar ao menu principal.")
+    print("1 - Atualizar regiao administrativa.")
+    print("2 - Atualizar situacao atual.")
+    print("3 - Atualizar ação.")
+    print("4 - Atualizar hospital.")
+    print("5 - Atualizar paciente.")
+    print("6 - Atualizar teste.")
+    print("7 - Atualizar sintoma.")
+    print("8 - Atualizar medicação.")
+    print("9 - Atualizar profissional saúde.")
+    print("10 - Atualizar parente.")
+
+    while(True):
+        try:
+            decisao = int(input(""))
+            if(decisao in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]):
+                break
+        except:
+            print("Entrada inválida")
+
+    if(decisao == 0):
+        return False
+
+    elif(decisao == 1):
+        return AdicionarRegiaoAdmin()
+
+    elif(decisao == 2):
+        return AdicionarSituacaoAtual()
+
+    elif(decisao == 3):
+        return AtualizarAcao()
+
+    elif(decisao == 4):
+        return AdicionarHospital()
+
+    elif(decisao == 5):
+        return AdicionarPaciente()
+
+    elif(decisao == 6):
+        return AdicionarTeste()
+
+    elif(decisao == 7):
+        return AdicionarSintoma()
+
+    elif(decisao == 8):
+        return AdicionarMedicacao()
+
+    elif(decisao == 9):
+        return AdicionarProfissional()
+
+    elif(decisao == 10):
+        return AdicionarParente()
 
     return False

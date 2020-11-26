@@ -11,7 +11,7 @@ from entidades.Parentes import Parente
 
 
 
-def AdcionarRegiaoAdmin():
+def AdicionarRegiaoAdmin():
 
     while(True):
         try:

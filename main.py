@@ -29,7 +29,6 @@ from views.telas import main
 
 # RegioesAdmin
 
-RegioesAdmin.AdicionaRegiaoAdmin('Aguas Claras', 50000)
 print(RegioesAdmin.ListaTodasRegioesAdmin())
 
 

@@ -45,3 +45,20 @@ def InsereTudo(tabela, dicio):
         conn.commit()
     except Error as err:
         print("Deu ruim: {}".format(err))
+
+
+def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
+    # Banco de dados
+    conn = CreatePool().get_connection()
+    cursor = conn.cursor()
+
+    # Criando SQL
+    sql = "UPDATE "+ tabela + " SET " + coluna1 + " = " + valor1 + " WHERE " + coluna2 + " = " + valor2
+    print('Operacao: ', sql)
+    a = input("")
+    # Inserindo na Tabela
+    try: 
+        cursor.execute(sql)
+        conn.commit()
+    except Error as err:
+        print("Deu ruim: {}".format(err))
