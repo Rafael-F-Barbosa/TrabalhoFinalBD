@@ -2,6 +2,8 @@ import util.OpDb as OpDb
 
 
 class ParentePaciente:
+    dicio = ['CpfPaciente', 'CpfParente']
+
     def __init__(self, cpfPaciente, cpfParente):
         self.cpfPaciente = cpfPaciente
         self.cpfParente = cpfParente
@@ -15,3 +17,6 @@ class ParentePaciente:
         dicioParentePaciente['CpfPaciente'] = cpfPaciente
         dicioParentePaciente['CpfParente'] = cpfParente
         OpDb.InsereTudo('ParentePaciente', dicioParentePaciente)
+
+    def AtualizaParentePaciente(coluna1, valor1, coluna2, valor2):
+        OpDb.AtualizaTudo('ParentePaciente', coluna1, valor1, coluna2, valor2)

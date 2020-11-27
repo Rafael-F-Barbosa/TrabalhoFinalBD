@@ -38,6 +38,7 @@ def InsereTudo(tabela, dicio):
     valores = valores[:-2] + ')'
     sql = "INSERT INTO "+ tabela + colunas + " VALUES " + valores
     print('Operacao: ', sql)
+    print(val)
     a = input("")
     # Inserindo na Tabela
     try: 

@@ -22,4 +22,5 @@ class Paciente:
         OpDb.InsereTudo('Pacientes', dicioPaciente)
 
     def AtualizaPaciente(coluna1, valor1, coluna2, valor2):
-        OpDb.AtualizaTudo('Paciente', coluna1, valor1, coluna2, valor2)
+        OpDb.AtualizaTudo('Pacientes', coluna1, valor1, coluna2, valor2)
+        

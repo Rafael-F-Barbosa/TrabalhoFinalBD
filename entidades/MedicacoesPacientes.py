@@ -2,6 +2,8 @@ import util.OpDb as OpDb
 
 
 class MedicacoesPacientes:
+    dicio = ['DataMed', 'Dosagem', 'codRegiao', 'CodMedicacao', 'CpfPaciente']
+
     def __init__(self, dataMed, dosagem, codMedicacao, cpfPaciente):
         self.dataMed = dataMed
         self.dosagem = dosagem
@@ -18,3 +20,6 @@ class MedicacoesPacientes:
         dicioRegiao['CodMedicacao'] = codMedicacao
         dicioRegiao['CpfPaciente'] = cpfPaciente
         OpDb.InsereTudo('MedicacoesPacientes', dicioRegiao)
+
+    def AtualizaMedicacoesPacientes(coluna1, valor1, coluna2, valor2):
+        OpDb.AtualizaTudo('MedicacoesPacientes', coluna1, valor1, coluna2, valor2)

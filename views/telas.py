@@ -3,6 +3,7 @@ from views.adicionar_dados import *
 from views.adicionar_relacoes import *
 from views.atualizar_dados import *
 from views.selecionar_tabelas import *
+from views.atualizar_relacoes import *
 
 
 
@@ -200,7 +201,6 @@ def dec_adicionar_relacoes():
 
 
 # decide em qual tabela será feita a atualização 
-# nao implementado
 def dec_atualizar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -256,5 +256,50 @@ def dec_atualizar_dados():
 
     elif(decisao == 10):
         return AtualizarParente()
+
+    return False
+
+
+# decide em qual tabela será feita a atualização de relacao
+def dec_atualizar_relacoes():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("O que você deseja fazer ")
+    print("0 - Voltar ao menu principal.")
+    print("1 - Atualizar parentes e pacientes.")
+    print("2 - Atualizar profissionais da saúde e pacientes.")
+    print("3 - Atualizar profissionais da saúde e hospitais.")
+    print("4 - Atualizar pacientes e medicações.")
+    print("5 - Atualizar pacientes com sintomas.")
+    print("6 - Atualizar pacientes com testes.")
+
+    while(True):
+        try:
+            decisao = int(input(""))
+            if(decisao in [0, 1, 2, 3, 4, 5, 6]):
+                break
+        except:
+            print("Entrada inválida")
+
+    if(decisao == 0):
+        return False
+
+    elif(decisao == 1):
+        return AtualizarParentePaciente()
+
+    elif(decisao == 2):
+        return AtualizarProfissionalPaciente()
+
+    elif(decisao == 3):
+        return AtualizarProfissionalHospital()
+
+    elif(decisao == 4):
+        return AtualizarMedicacoesPaciente()
+
+    elif(decisao == 5):
+        return AtualizarSintomasPacientes()
+
+    elif(decisao == 6):
+        return AtualizarTestesPacientes()
+
 
     return False

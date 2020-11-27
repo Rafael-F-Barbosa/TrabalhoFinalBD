@@ -2,6 +2,8 @@ import util.OpDb as OpDb
 
 
 class ProfTrabalhaHospital:
+    dicio = ['CodHospital', 'CpfProfissional']
+
     def __init__(self, codHospital, cpfProfissional):
         self.codHospital = codHospital
         self.codProfissional = cpfProfissional
@@ -14,3 +16,6 @@ class ProfTrabalhaHospital:
         dicioProfTrabalhaHospital['CodHospital'] = codHospital
         dicioProfTrabalhaHospital['CpfProfissional'] = cpfProfissional
         OpDb.InsereTudo('ProfTabalhaHospital', dicioProfTrabalhaHospital)
+
+    def AtualizaProfissionalHospital(coluna1, valor1, coluna2, valor2):
+        OpDb.AtualizaTudo('ProfTrabalhaHospital', coluna1, valor1, coluna2, valor2)

@@ -29,8 +29,6 @@ from views.telas import main
 
 # RegioesAdmin
 
-print(RegioesAdmin.ListaTodasRegioesAdmin())
-
 
 main()
 
