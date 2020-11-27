@@ -1,4 +1,6 @@
 import os
+from util.formata import imprime_lista_tabela_formatado as formata_tabela
+
 from entidades.RegioesAdmin import RegioesAdmin
 from entidades.SituacaoAtual import SituacaoAtual
 from entidades.Acoes import Acoes
@@ -23,7 +25,9 @@ def VerRelatorioPersonalizado():
 
     return False
 
-# NÃO IMPLEMENTADO
+
+
+# INCOMPLENTO
 def VerTabelasDados():
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -46,28 +50,37 @@ def VerTabelasDados():
             if(decisao in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]):
                 if(decisao == 1):
                     lista = RegioesAdmin.ListaTodasRegioesAdmin()
+                    formata_tabela(lista, RegioesAdmin.dicio)
                 elif(decisao == 2):
                     lista = SituacaoAtual.ListaTudoSituacaoAtual()
+                    formata_tabela(lista, SituacaoAtual.dicio)
                 elif(decisao == 3):
                     lista = Acoes.ListaTudoAcoes()
+                    formata_tabela(lista, Acoes.dicio)
                 elif(decisao == 4):
                     lista = Hospital.ListaTudoHospitais()
+                    formata_tabela(lista, Hospital.dicio)
                 elif(decisao == 5):
                     lista = Paciente.ListaTodosPacientes()
+                    formata_tabela(lista, Paciente.dicio)
                 elif(decisao == 6):
                     lista = Testes.ListaTestes()
+                    formata_tabela(lista, Testes.dicio)
                 elif(decisao == 7):
                     lista = Sintomas.ListaSintomas()
+                    formata_tabela(lista, Sintomas.dicio)
                 elif(decisao == 8):
                     lista = Medicacoes.ListaMedicacoes()
+                    formata_tabela(lista, Medicacoes.dicio)
                 elif(decisao == 9):
                     lista = ProfissionaisSaude.ListaProfissionaisSaude()
+                    formata_tabela(lista, ProfissionaisSaude.dicio)
                 elif(decisao == 10):
                     lista = Parente.ListaTodosParentes()
+                    formata_tabela(lista, Parente.dicio)
                 
                 # FORMATAR IMPRESSÃO DA LISTA
-                print(lista)
-                a = input('Enter para seguir')
+                a = input('Enter para sair')
                 break
 
             elif(decisao == 0):
