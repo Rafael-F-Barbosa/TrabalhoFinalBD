@@ -86,7 +86,7 @@ def VerTabelasDados():
             elif(decisao == 0):
                 break
         except:
-            print("Entrada inválida.")
+            print("Entrada inválida.oi")
 
     return False
 

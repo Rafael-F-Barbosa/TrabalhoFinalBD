@@ -22,13 +22,13 @@ def formata_texto(texto):
 
     return texto_final
 
-
-# print(RED + "ERROR!" + RESET + "Something went wrong...")
-
-
-
 def imprime_lista_tabela_formatado(lista_tabelas, colunas):
-    tam = len(lista_tabelas[0])
+    try:     
+        tam = len(lista_tabelas[0])
+    except:
+        print("Não há dados nessa tabela.")
+        return
+
     linha = (20 * tam) *'-'
     linha = RED + linha + RESET
     

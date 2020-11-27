@@ -16,7 +16,7 @@ from entidades.Parentes import Parente
 from entidades.ParentePaciente import ParentePaciente
 
 from views.telas import main
-
+from aux import preenche_banco_inicialmente
 
 # -----------------------------------------------------------------------
 
@@ -29,8 +29,9 @@ from views.telas import main
 
 # RegioesAdmin
 
-
+# preenche_banco_inicialmente()
 main()
+
 
 
 
