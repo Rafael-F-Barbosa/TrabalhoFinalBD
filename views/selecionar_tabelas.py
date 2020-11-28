@@ -19,22 +19,6 @@ from entidades.ProfTrabalhaHospital import ProfTrabalhaHospital
 from entidades.ProfAtendePaciente import ProfAtendePaciente
 from entidades.ParentePaciente import ParentePaciente
 
-# NÃO IMPLEMENTADO
-def VerRelatorioPersonalizado():
-    while(True):
-        try:
-            nome = str(input("Nome da regiao: "))
-            populacao = int(input("Populacao: "))
-            RegioesAdmin.AdicionaRegiaoAdmin(nome,populacao)
-            break
-        except:
-            print("Não foi possivel adicionar a região.\nTente novamente.")
-
-    return False
-
-
-
-# INCOMPLENTO
 def VerTabelasDados():
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -86,7 +70,6 @@ def VerTabelasDados():
                     lista = Parente.ListaTodosParentes()
                     formata_tabela(lista, Parente.dicio)
                 
-                # FORMATAR IMPRESSÃO DA LISTA
                 a = input('Enter para sair')
                 break
 
@@ -132,7 +115,6 @@ def VerTabelasRelacoes():
                     lista = TestesPacientes.ListaTestesPacientes()
                     formata_tabela(lista, TestesPacientes.dicio)
                 
-                # FORMATAR IMPRESSÃO DA LISTA
                 a = input('Enter para sair')
                 break
 
@@ -142,6 +124,22 @@ def VerTabelasRelacoes():
             print("Entrada inválida")
 
     return False
+
+
+
+# NÃO IMPLEMENTADO
+def VerRelatorioPersonalizado():
+    while(True):
+        try:
+            nome = str(input("Nome da regiao: "))
+            populacao = int(input("Populacao: "))
+            RegioesAdmin.AdicionaRegiaoAdmin(nome, populacao)
+            break
+        except:
+            print("Não foi possivel adicionar a região.\nTente novamente.")
+
+    return False
+
 
 # NÃO IMPLEMENTADO
 def RastreamentoContatos():

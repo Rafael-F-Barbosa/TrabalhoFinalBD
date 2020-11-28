@@ -75,8 +75,12 @@ def preenche_banco_inicialmente():
     Testes.AdicionaTestes("Testes Rápidos")
 
     # TestesPacientes
-    # TestesPacientes.AdicionaTestesPacientes("2020-11-17", 0, 1, '18229735114')
-    # print(TestesPacientes.ListaTestesPacientes())
+    # AdicionaTestesPacientes(dataTestes, resultados, codTeste, cpfPaciente)
+    TestesPacientes.AdicionaTestesPacientes("2020-11-17", 1, 1, '18229735114')
+    TestesPacientes.AdicionaTestesPacientes("2020-11-19", 1, 2, '18229744112')
+    TestesPacientes.AdicionaTestesPacientes("2020-11-12", 1, 3, '28229735118')
+    TestesPacientes.AdicionaTestesPacientes("2020-11-15", 1, 2, '18229735113')
+    TestesPacientes.AdicionaTestesPacientes("2020-11-14", 1, 3, '18229735119')
 
     # Sintomas # Mudar esse tipo físico ou psico pra gravidade do sintoma
     Sintomas.AdicionaSintomas("Febre", "Fisico")
@@ -86,8 +90,12 @@ def preenche_banco_inicialmente():
     Sintomas.AdicionaSintomas("Dor ou pressão no peito", "Físico")
 
     # SintomasPacientes
-    # SintomasPacientes.AdicionaSintomasPacientes("2020-10-17", 1, '18229735114')
-    # print(SintomasPacientes.ListaSintomasPacientes())
+    # AdicionaSintomasPacientes(dataSintoma, codSintoma, cpfPaciente)
+    SintomasPacientes.AdicionaSintomasPacientes("2020-10-17", 1, '18229735114')
+    SintomasPacientes.AdicionaSintomasPacientes("2020-10-18", 2, '18229744112')
+    SintomasPacientes.AdicionaSintomasPacientes("2020-10-19", 3, '28229735118')
+    SintomasPacientes.AdicionaSintomasPacientes("2020-10-15", 4, '18229735113')
+    SintomasPacientes.AdicionaSintomasPacientes("2020-10-14", 2, '18229735119')
 
     # Medicacoes
     Medicacoes.AdicionaMedicacoes("Ozônio")
@@ -97,8 +105,13 @@ def preenche_banco_inicialmente():
     Medicacoes.AdicionaMedicacoes("Corticoides")
 
     # Medicacoes Pacientes
-    # MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-17", '50g',1,'18229735114')
-    # print(MedicacoesPacientes.ListaMedicacoesPacientes())
+    # AdicionaMedicacoesPacientes(dataMed, Dosagem, codMedicacao, cpfPaciente)
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-17", '50g',1,'18229735114')
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-18", '75g',4,'18229744112')
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-19", '100g',2,'28229735118')
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-20", '10 gotas',2,'18229735113')
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-02", '50g',3,'18229735119')
+
 
     # ProfissionaisSaude
     # AdicionaProfissionaisSaude(cpf, nome, profissao, teveCovid)
@@ -109,12 +122,20 @@ def preenche_banco_inicialmente():
     ProfissionaisSaude.AdicionaProfissionaisSaude("14229735111", "Mariana Garcia", "Médica", 5)
 
     # ProfTrabalhaHospital
-    # ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(1, '18229735115')
-    # print(ProfTrabalhaHospital.ListaProfTrabalhaHospital())
+    # AdicionaProfTrabalhaHospital(codHospital, cpfProfissional)
+    ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(1, '18229335112')
+    ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(2, '18221135114')
+    ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(3, '18229710115')
+    ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(4, '18129735317')
+    ProfTrabalhaHospital.AdicionaProfTrabalhaHospital(5, '14229735111')
 
     # ProfAtendePaciente
-    # ProfAtendePaciente.AdicionaProfAtendePaciente('18229735114', '18229735115')
-    # print(ProfAtendePaciente.ListaProfAtendePaciente())
+    # AdicionaProfAtendePaciente(cpfPaciente, cpfProfissional)
+    ProfAtendePaciente.AdicionaProfAtendePaciente('18229735114', '18229335112')
+    ProfAtendePaciente.AdicionaProfAtendePaciente('18229744112', '18221135114')
+    ProfAtendePaciente.AdicionaProfAtendePaciente('28229735118', '18229710115')
+    ProfAtendePaciente.AdicionaProfAtendePaciente('18229735113', '18129735317')
+    ProfAtendePaciente.AdicionaProfAtendePaciente('18229735119', '14229735111')
 
 
     # Parente
@@ -124,8 +145,11 @@ def preenche_banco_inicialmente():
     Parente.AdicionaParente("18229755543", "Pedro Fagundes", "1979-04-05", 0)
     Parente.AdicionaParente("18229755544", "Carla das Luzes", "1970-04-05", 1)
     Parente.AdicionaParente("18229755545", "Edson dos Santos", "1995-04-05", 0)
-    # print(Parente.ListaTodosParentes())
 
     # ParentePacientes
-    # ParentePaciente.AdicionaParentePaciente('18229735114', '18229755545')
-    # print(ParentePaciente.ListaParentePaciente())
+    # AdicionaParentePaciente(cpfPaciente, cpfParente)
+    ParentePaciente.AdicionaParentePaciente('28229735118', '18229755541')
+    ParentePaciente.AdicionaParentePaciente('18229735113', '18229755542')
+    ParentePaciente.AdicionaParentePaciente('18229744112', '18229755543')
+    ParentePaciente.AdicionaParentePaciente('18229735119', '18229755544')
+    ParentePaciente.AdicionaParentePaciente('18229735114', '18229755545')

@@ -1,10 +1,8 @@
 import mysql.connector.pooling
 from mysql.connector import Error
-
 from .GetDb import CreatePool
 
 
-# Aqui tem operações no banco de dados que podem ser reutilizadas.
 def SelecionaTudo(tabela):
     # Banco de dados
     conn = CreatePool().get_connection()

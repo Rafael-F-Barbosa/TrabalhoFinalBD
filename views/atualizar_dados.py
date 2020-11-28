@@ -13,25 +13,19 @@ from entidades.Parentes import Parente
 def Atualizar(lista):
             
             print("Por qual parâmetro você quer atualizar: ")
-
             for l in range(len(lista)):
                 print(l + 1, " - ", lista[l])
 
             coluna2 = int(input(""))
-
             print("Qual o valor do ", lista[coluna2 - 1], " que você deseja atualizar: ")
-
             valor2 = str(input(""))
-
             print("Qual parâmetro você quer atualizar: ")
 
             for l in range(len(lista)):
                 print(l + 1, " - ", lista[l])
 
             coluna1 = int(input(""))
-
             print("Qual novo valor de  ", lista[coluna1 - 1], ": ")
-
             valor1 = str(input(""))
 
             return coluna1,valor1, coluna2, valor2

@@ -37,7 +37,7 @@ def dec_apresenta_funcionalidades():
                 print("8 - Voltar para o início.")
                 print("9 - Finalizar programa.")
                 decisao = int(input(""))
-                if(decisao in [1, 2, 3, 4, 5, 6, 7, 8]):
+                if(decisao in [1, 2, 3, 4, 5, 6, 7, 8, 9]):
                     break
             except:
                 print("Entrada inválida")
@@ -63,7 +63,6 @@ def dec_apresenta_funcionalidades():
 
     return False
 
-# Acho que tá ok essa aqui
 def dec_ver_informacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -99,7 +98,7 @@ def dec_ver_informacoes():
 
     return False
 
-# decide em qual tabela será feita a adição
+
 def dec_adicionar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -159,7 +158,6 @@ def dec_adicionar_dados():
     return False
 
 
-# decide em qual tabela será feita a adição de relacao
 def dec_adicionar_relacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -204,7 +202,6 @@ def dec_adicionar_relacoes():
     return False
 
 
-# decide em qual tabela será feita a atualização 
 def dec_atualizar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -381,7 +378,7 @@ def dec_deletar_dados():
 
     return False
 
-# decide em qual tabela será deletado 
+ 
 def dec_deletar_relacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
