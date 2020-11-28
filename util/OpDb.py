@@ -65,3 +65,20 @@ def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
         print("Deu ruim: {}".format(err))
         a = input("")
 
+
+def Deleta(tabela, coluna, valor):
+    # Banco de dados
+    conn = CreatePool().get_connection()
+    cursor = conn.cursor()
+
+    # Criando SQL
+    sql = "DELETE FROM "+ tabela + " WHERE " + coluna + " = " + valor
+    print('Operacao: ', sql)
+    a = input("")
+    # Inserindo na Tabela
+    try: 
+        cursor.execute(sql)
+        conn.commit()
+    except Error as err:
+        print("Deu ruim: {}".format(err))
+        a = input("")

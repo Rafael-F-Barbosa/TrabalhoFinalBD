@@ -29,7 +29,7 @@ from aux import preenche_banco_inicialmente
 
 # RegioesAdmin
 
-# preenche_banco_inicialmente()
+#preenche_banco_inicialmente()
 main()
 
 

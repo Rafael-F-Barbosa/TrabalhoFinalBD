@@ -12,14 +12,21 @@ from entidades.Medicacoes import Medicacoes
 from entidades.ProfissionaisSaude import ProfissionaisSaude
 from entidades.Parentes import Parente
 
+from entidades.TestesPacientes import TestesPacientes
+from entidades.SintomasPacientes import SintomasPacientes
+from entidades.MedicacoesPacientes import MedicacoesPacientes
+from entidades.ProfTrabalhaHospital import ProfTrabalhaHospital
+from entidades.ProfAtendePaciente import ProfAtendePaciente
+from entidades.ParentePaciente import ParentePaciente
+
 # NÃO IMPLEMENTADO
 def VerRelatorioPersonalizado():
     while(True):
         try:
             nome = str(input("Nome da regiao: "))
             populacao = int(input("Populacao: "))
-            RegioesAdmin.AdicionaRegiaoAdmin(nome,populacao);
-            break;
+            RegioesAdmin.AdicionaRegiaoAdmin(nome,populacao)
+            break
         except:
             print("Não foi possivel adicionar a região.\nTente novamente.")
 
@@ -86,20 +93,53 @@ def VerTabelasDados():
             elif(decisao == 0):
                 break
         except:
-            print("Entrada inválida.oi")
+            print("Entrada inválida")
 
     return False
 
-# NÃO IMPLEMENTADO
 def VerTabelasRelacoes():
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("O que você deseja fazer ")
+    print("0 - Voltar ao menu principal.")
+    print("1 - Ver parentes e pacientes.")
+    print("2 - Ver profissionais da saúde e pacientes.")
+    print("3 - Ver profissionais da saúde e hospitais.")
+    print("4 - Ver pacientes e medicações.")
+    print("5 - Ver pacientes com sintomas.")
+    print("6 - Ver pacientes com testes.")
+
     while(True):
         try:
-            nome = str(input("Nome da regiao: "))
-            populacao = int(input("Populacao: "))
-            RegioesAdmin.AdicionaRegiaoAdmin(nome,populacao);
-            break;
+            decisao = int(input(""))
+            if(decisao in [1, 2, 3, 4, 5, 6]):
+                if(decisao == 1):
+                    lista = ParentePaciente.ListaParentePaciente()
+                    formata_tabela(lista, ParentePaciente.dicio)
+                elif(decisao == 2):
+                    lista = ProfAtendePaciente.ListaProfAtendePaciente()
+                    formata_tabela(lista, ProfAtendePaciente.dicio)
+                elif(decisao == 3):
+                    lista = ProfTrabalhaHospital.ListaProfTrabalhaHospital()
+                    formata_tabela(lista, ProfTrabalhaHospital.dicio)
+                elif(decisao == 4):
+                    lista = MedicacoesPacientes.ListaMedicacoesPacientes()
+                    formata_tabela(lista, MedicacoesPacientes.dicio)
+                elif(decisao == 5):
+                    lista = SintomasPacientes.ListaSintomasPacientes()
+                    formata_tabela(lista, SintomasPacientes.dicio)
+                elif(decisao == 6):
+                    lista = TestesPacientes.ListaTestesPacientes()
+                    formata_tabela(lista, TestesPacientes.dicio)
+                
+                # FORMATAR IMPRESSÃO DA LISTA
+                a = input('Enter para sair')
+                break
+
+            elif(decisao == 0):
+                break
         except:
-            print("Não foi possivel adicionar a região.\nTente novamente.")
+            print("Entrada inválida")
 
     return False
 

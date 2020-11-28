@@ -22,4 +22,4 @@ class Parente:
         OpDb.InsereTudo('Parentes', dicioParente)
 
     def AtualizaParente(coluna1, valor1, coluna2, valor2):
-        OpDb.AtualizaTudo('Parente', coluna1, valor1, coluna2, valor2)
+        OpDb.AtualizaTudo('Parentes', coluna1, valor1, coluna2, valor2)

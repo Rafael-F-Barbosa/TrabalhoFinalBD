@@ -4,6 +4,7 @@ from views.adicionar_relacoes import *
 from views.atualizar_dados import *
 from views.selecionar_tabelas import *
 from views.atualizar_relacoes import *
+import views.deletar as deletar
 
 
 
@@ -32,8 +33,9 @@ def dec_apresenta_funcionalidades():
                 print("4 - Atualizar dados sobre a pandemia.")
                 print("5 - Atualizar relacionamentos.")
                 print("6 - Deletar dados.")
-                print("7 - Voltar para o início.")
-                print("8 - Finalizar programa.")
+                print("7 - Deletar relacionamentos.")
+                print("8 - Voltar para o início.")
+                print("9 - Finalizar programa.")
                 decisao = int(input(""))
                 if(decisao in [1, 2, 3, 4, 5, 6, 7, 8]):
                     break
@@ -49,12 +51,14 @@ def dec_apresenta_funcionalidades():
         elif(decisao == 4):
             sair = dec_atualizar_dados()
         elif(decisao == 5):
-            sair = dec_adicionar_dados() # Arrumar 
+            sair = dec_atualizar_relacoes() 
         elif(decisao == 6):
-            sair = dec_adicionar_dados() # Arrumar 
+            sair = dec_deletar_dados() 
         elif(decisao == 7):
-            return False
+            sair = dec_deletar_relacoes() 
         elif(decisao == 8):
+            return False
+        elif(decisao == 9):
             return True
 
     return False
@@ -301,5 +305,129 @@ def dec_atualizar_relacoes():
     elif(decisao == 6):
         return AtualizarTestesPacientes()
 
+
+    return False
+
+
+# decide em qual tabela será deletado 
+def dec_deletar_dados():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("O que você deseja fazer ")
+    print("0 - Voltar ao menu principal.")
+    print("1 - Deletar regiao administrativa.")
+    print("2 - Deletar situacao atual.")
+    print("3 - Deletar ação.")
+    print("4 - Deletar hospital.")
+    print("5 - Deletar paciente.")
+    print("6 - Deletar teste.")
+    print("7 - Deletar sintoma.")
+    print("8 - Deletar medicação.")
+    print("9 - Deletar profissional saúde.")
+    print("10 - Deletar parente.")
+
+    while(True):
+        try:
+            decisao = int(input(""))
+            if(decisao in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]):
+                break
+        except:
+            print("Entrada inválida")
+
+    if(decisao == 0):
+        return False
+
+    elif(decisao == 1):
+        lista = RegioesAdmin.dicio
+        tabela = "RegiaoAdmin"
+
+    elif(decisao == 2):
+        lista = SituacaoAtual.dicio
+        tabela = "SituacaoAtual"
+
+    elif(decisao == 3):
+        lista = Acoes.dicio
+        tabela = "Acoes"
+
+    elif(decisao == 4):
+        lista = Hospitais.dicio
+        tabela = "Hospitais"
+
+    elif(decisao == 5):
+        lista = Paciente.dicio
+        tabela = "Pacientes"
+
+    elif(decisao == 6):
+        lista = Testes.dicio
+        tabela = "Testes"
+
+    elif(decisao == 7):
+        lista = Sintomas.dicio
+        tabela = "Sintomas"
+
+    elif(decisao == 8):
+        lista = Medicacoes.dicio
+        tabela = "Medicacoes"
+
+    elif(decisao == 9):
+        lista = ProfissionaisSaude.dicio
+        tabela = "ProfissionaisSaude"
+
+    elif(decisao == 10):
+        lista = Parente.dicio
+        tabela = "Parentes"
+
+    deletar.Deletar(tabela, lista)
+
+
+    return False
+
+# decide em qual tabela será deletado 
+def dec_deletar_relacoes():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("O que você deseja fazer ")
+    print("0 - Voltar ao menu principal.")
+    print("1 - Deletar relação entre parentes e pacientes.")
+    print("2 - Deletar relação entre profissionais da saúde e pacientes.")
+    print("3 - Deletar relação entre profissionais da saúde e hospitais.")
+    print("4 - Deletar relação entre pacientes e medicações.")
+    print("5 - Deletar relação entre pacientes com sintomas.")
+    print("6 - Deletar relação entre pacientes com testes.")
+
+    while(True):
+        try:
+            decisao = int(input(""))
+            if(decisao in [0, 1, 2, 3, 4, 5, 6]):
+                break
+        except:
+            print("Entrada inválida")
+
+    if(decisao == 0):
+        return False
+
+    elif(decisao == 1):
+        lista = ParentePaciente.dicio
+        tabela = "ParentePaciente"
+
+    elif(decisao == 2):
+        lista = ProfAtendePaciente.dicio
+        tabela = "ProfAtendePaciente"
+
+    elif(decisao == 3):
+        lista = ProfTrabalhaHospital.dicio
+        tabela = "ProfTrabalhaHospital"
+
+    elif(decisao == 4):
+        lista = MedicacoesPacientes.dicio
+        tabela = "MedicacoesPacientes"
+
+    elif(decisao == 5):
+        lista = SintomasPacientes.dicio
+        tabela = "SintomasPacientes"
+
+    elif(decisao == 6):
+        lista = TestesPacientes.dicio
+        tabela = "TestesPacientes"
+
+    deletar.Deletar(tabela, lista)
 
     return False

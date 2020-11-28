@@ -50,7 +50,7 @@ def AtualizarAcao():
 def AtualizarHospital():
     while(True):
         try:
-            coluna1, valor1, coluna2, valor2 = Atualizar(Hospitaisc.dicio)
+            coluna1, valor1, coluna2, valor2 = Atualizar(Hospitais.dicio)
             Hospitais.AtualizaHospital(Hospitais.dicio[coluna1-1], valor1, Hospitais.dicio[coluna2-1], valor2)
             break
         except:

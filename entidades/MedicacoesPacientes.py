@@ -2,7 +2,7 @@ import util.OpDb as OpDb
 
 
 class MedicacoesPacientes:
-    dicio = ['DataMed', 'Dosagem', 'codRegiao', 'CodMedicacao', 'CpfPaciente']
+    dicio = ['DataMed', 'Dosagem', 'codMEdicacao', 'CpfPaciente']
 
     def __init__(self, dataMed, dosagem, codMedicacao, cpfPaciente):
         self.dataMed = dataMed
