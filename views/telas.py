@@ -67,7 +67,7 @@ def dec_ver_informacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
     print("0 - Voltar ao menu principal.")
-    print("1 - Ver relatório personalizado.")
+    print("1 - Consultas personalizadas.")
     print("2 - Ver tabelas de dados.")
     print("3 - Ver tabelas de relações.")
     print("4 - Rastrear contatos.")
@@ -84,7 +84,7 @@ def dec_ver_informacoes():
         return False
 
     elif(decisao == 1):
-        return VerRelatorioPersonalizado()
+        return ConsultasPersonalizadas()
 
     elif(decisao == 2):
         return VerTabelasDados()

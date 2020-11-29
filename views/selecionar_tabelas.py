@@ -147,12 +147,11 @@ def RastreamentoContatos():
     return False
 
 # NÃO IMPLEMENTADO
-def VerRelatorioPersonalizado():
+def ConsultasPersonalizadas():
     while(True):
         try:
-            nome = str(input("Nome da regiao: "))
-            populacao = int(input("Populacao: "))
-            RegioesAdmin.AdicionaRegiaoAdmin(nome, populacao)
+            print('Uhuu')
+            populacao = int(input(""))
             break
         except:
             print("Não foi possivel adicionar a região.\nTente novamente.")

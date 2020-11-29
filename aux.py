@@ -73,6 +73,8 @@ def preenche_banco_inicialmente():
     Testes.AdicionaTestes("RT-PCR")
     Testes.AdicionaTestes("Sorologia")
     Testes.AdicionaTestes("Testes Rápidos")
+    Testes.AdicionaTestes("Raio X - Pulmão")
+    Testes.AdicionaTestes("Hemograma")
 
     # TestesPacientes
     # AdicionaTestesPacientes(dataTestes, resultados, codTeste, cpfPaciente)
