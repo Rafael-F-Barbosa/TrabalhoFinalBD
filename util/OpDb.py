@@ -37,7 +37,7 @@ def InsereTudo(tabela, dicio):
     sql = "INSERT INTO "+ tabela + colunas + " VALUES " + valores
     print('Operacao: ', sql)
     print(val)
-    a = input("")
+    # a = input("")
     # Inserindo na Tabela
     try: 
         cursor.execute(sql, tuple(val))
@@ -65,6 +65,7 @@ def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
 
 
 def Deleta(tabela, coluna, valor):
+
     # Banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
@@ -80,3 +81,19 @@ def Deleta(tabela, coluna, valor):
     except Error as err:
         print("Deu ruim: {}".format(err))
         a = input("")
+
+def ChamaProcedure(nome, cpf):
+    # Banco de dados
+    conn = CreatePool().get_connection()
+    cursor = conn.cursor()
+
+    try:
+        cursor.callproc(nome, [cpf])
+        for result in cursor.stored_results():
+            return result.fetchall()
+
+    except Error as err:
+        print("Deu ruim: {}".format(err))
+        a = input("")
+    
+    return False;

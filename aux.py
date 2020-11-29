@@ -132,6 +132,7 @@ def preenche_banco_inicialmente():
     # ProfAtendePaciente
     # AdicionaProfAtendePaciente(cpfPaciente, cpfProfissional)
     ProfAtendePaciente.AdicionaProfAtendePaciente('18229735114', '18229335112')
+    ProfAtendePaciente.AdicionaProfAtendePaciente('18229735114', '18229710115')
     ProfAtendePaciente.AdicionaProfAtendePaciente('18229744112', '18221135114')
     ProfAtendePaciente.AdicionaProfAtendePaciente('28229735118', '18229710115')
     ProfAtendePaciente.AdicionaProfAtendePaciente('18229735113', '18129735317')
@@ -153,3 +154,4 @@ def preenche_banco_inicialmente():
     ParentePaciente.AdicionaParentePaciente('18229744112', '18229755543')
     ParentePaciente.AdicionaParentePaciente('18229735119', '18229755544')
     ParentePaciente.AdicionaParentePaciente('18229735114', '18229755545')
+    ParentePaciente.AdicionaParentePaciente('18229735114', '18229755544')

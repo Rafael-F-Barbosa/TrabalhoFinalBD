@@ -8,6 +8,11 @@ RESET = "\033[0;0m"
 BOLD = "\033[;1m"
 REVERSE = "\033[;7m"
 
+def formata_lista(lista):
+    lista_final = []
+    for x in lista:
+        lista_final.append(list(x))
+    return lista_final
 
 def formata_data(data):
     ano, mes, dia = data[:4], data[5:7], data[8:]

@@ -1,5 +1,7 @@
 import os
 from util.formata import imprime_lista_tabela_formatado as formata_tabela
+from util.formata import formata_lista
+from util.OpDb import ChamaProcedure
 
 from entidades.RegioesAdmin import RegioesAdmin
 from entidades.SituacaoAtual import SituacaoAtual
@@ -11,7 +13,6 @@ from entidades.Sintomas import Sintomas
 from entidades.Medicacoes import Medicacoes
 from entidades.ProfissionaisSaude import ProfissionaisSaude
 from entidades.Parentes import Parente
-
 from entidades.TestesPacientes import TestesPacientes
 from entidades.SintomasPacientes import SintomasPacientes
 from entidades.MedicacoesPacientes import MedicacoesPacientes
@@ -126,6 +127,24 @@ def VerTabelasRelacoes():
     return False
 
 
+def RastreamentoContatos():
+    while(True):
+        try:
+            cpf = str(input("CPF Paciente: "))
+            lista1 = ChamaProcedure('RastreiaParentesPacientes', cpf)
+            lista2 = ChamaProcedure('RastreiaProfsPacientes', cpf)
+            
+            print('\nParentes: ')
+            formata_tabela(lista1, ['Nome', 'CPF'])
+            print('\nProfissionais da Saúde: ')
+            formata_tabela(lista2, ['Nome', 'CPF'])
+            
+            a = input('Enter para sair')
+            break
+        except:
+            print("Não foi possível encontrar contatos desse paciente.\nTente novamente.")
+
+    return False
 
 # NÃO IMPLEMENTADO
 def VerRelatorioPersonalizado():
@@ -141,16 +160,5 @@ def VerRelatorioPersonalizado():
     return False
 
 
-# NÃO IMPLEMENTADO
-def RastreamentoContatos():
-    while(True):
-        try:
-            nome = str(input("Nome da regiao: "))
-            populacao = int(input("Populacao: "))
-            RegioesAdmin.AdicionaRegiaoAdmin(nome,populacao);
-            break;
-        except:
-            print("Não foi possivel adicionar a região.\nTente novamente.")
 
-    return False
 

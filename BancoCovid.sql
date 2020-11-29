@@ -149,5 +149,25 @@ CREATE TABLE IF NOT EXISTS ParentePaciente(
     FOREIGN KEY (CpfParente) references Parentes(Cpf),
     PRIMARY KEY (CpfPaciente, CpfParente)
 );
+-- Stored Procedures
 
-select * from SituacaoAtual; 
+DROP PROCEDURE IF EXISTS RastreiaProfsPacientes;
+
+CREATE PROCEDURE RastreiaProfsPacientes(CPF VARCHAR(11))
+SELECT Nome, CPF
+FROM ProfissionaisSaude
+INNER JOIN ProfAtendePaciente ON ProfAtendePaciente.CpfProfissional = ProfissionaisSaude.CPF
+WHERE ProfAtendePaciente.CpfPaciente = CPF;
+
+DROP PROCEDURE IF EXISTS RastreiaParentesPacientes;
+
+CREATE PROCEDURE RastreiaParentesPacientes(CPF VARCHAR(11))
+SELECT Nome, Cpf
+FROM Parentes
+INNER JOIN ParentePaciente ON ParentePaciente.CpfParente = Parentes.Cpf
+WHERE ParentePaciente.CpfPaciente = CPF;
+
+
+
+
+
