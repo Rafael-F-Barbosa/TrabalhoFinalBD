@@ -149,6 +149,8 @@ CREATE TABLE IF NOT EXISTS ParentePaciente(
     FOREIGN KEY (CpfParente) references Parentes(Cpf),
     PRIMARY KEY (CpfPaciente, CpfParente)
 );
+
+
 -- Stored Procedures
 
 DROP PROCEDURE IF EXISTS RastreiaProfsPacientes;
@@ -167,7 +169,19 @@ FROM Parentes
 INNER JOIN ParentePaciente ON ParentePaciente.CpfParente = Parentes.Cpf
 WHERE ParentePaciente.CpfPaciente = CPF;
 
+DROP PROCEDURE IF EXISTS InformacoesDf;
+
+CREATE PROCEDURE InformacoesDf(d DATE)
+SELECT SUM(CasosLeves), SUM(CasosGraves), SUM(Mortes), SUM(Recuperados) FROM SituacaoAtual
+WHERE DataSituacao = d;
 
 
+-- Views
+
+DROP VIEW IF EXISTS vw_hospitais_cheios;
 
 
+CREATE VIEW vw_hospitais_cheios
+AS
+SELECT Codigo, Nome, Cep FROM Hospitais
+WHERE QtdLeitosDisponiveis = 0;

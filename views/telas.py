@@ -70,7 +70,6 @@ def dec_ver_informacoes():
     print("1 - Consultas personalizadas.")
     print("2 - Ver tabelas de dados.")
     print("3 - Ver tabelas de relações.")
-    print("4 - Rastrear contatos.")
 
     while(True):
         try:
@@ -91,10 +90,6 @@ def dec_ver_informacoes():
 
     elif(decisao == 3):
         return VerTabelasRelacoes()
-
-    elif(decisao == 4):
-        return RastreamentoContatos()
-
 
     return False
 

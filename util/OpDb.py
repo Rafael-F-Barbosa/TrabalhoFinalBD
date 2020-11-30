@@ -5,6 +5,7 @@ from .GetDb import CreatePool
 
 def SelecionaTudo(tabela):
     # Banco de dados
+
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
 

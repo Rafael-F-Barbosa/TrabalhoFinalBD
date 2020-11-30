@@ -34,11 +34,19 @@ def preenche_banco_inicialmente():
     # AdicionaSituacaoAtual(dataSituacao, casosLeves, casosGraves, mortes, recuperados, codRegiao)
     SituacaoAtual.AdicionaSituacaoAtual('2020-11-27', 100, 145, 450, 5, 1)
     SituacaoAtual.AdicionaSituacaoAtual('2020-11-28', 100, 435, 445, 5, 2)
-    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 105, 15, 145, 5, 2)
     SituacaoAtual.AdicionaSituacaoAtual('2020-11-25', 100, 45, 245, 5, 4)
     SituacaoAtual.AdicionaSituacaoAtual('2020-11-12', 2000, 35, 445, 5, 4)
     SituacaoAtual.AdicionaSituacaoAtual('2020-11-26', 50, 15, 465, 5, 6)
     SituacaoAtual.AdicionaSituacaoAtual('2020-11-25', 155, 5, 415, 5, 5)
+
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 105, 30, 145, 10, 2)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 10, 145, 450, 15, 1)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 150, 535, 445, 5, 3)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 105, 105, 200, 4, 4)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 140, 45, 307, 20, 5)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 2000, 35, 445, 25, 6)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 50, 15, 465, 50, 7)
+    SituacaoAtual.AdicionaSituacaoAtual('2020-11-29', 155, 52, 415, 55, 8)
 
      
 
@@ -53,11 +61,13 @@ def preenche_banco_inicialmente():
 
     # Hospitais
     # AdicionaHospital(nome, cep, qtdLeitosDisponiveis, qtdLeitosOcupados, numeroPessoasComCovid, codRegiao)
-    Hospital.AdicionaHospital("HRAN", "73365456", 45, 45, 45, 4)
-    Hospital.AdicionaHospital("HRP", "73365457", 45, 45, 45, 5)
-    Hospital.AdicionaHospital("Hospital de Base", "73365458", 45, 45, 45, 4)
-    Hospital.AdicionaHospital("HRT", "73365459", 45, 45, 45, 3)
-    Hospital.AdicionaHospital("HRG", "73365433", 45, 45, 45, 8)
+    Hospital.AdicionaHospital("HRAN", "73365456", 10, 20, 12, 4)
+    Hospital.AdicionaHospital("HRP", "73365457", 20, 22, 27, 5)
+    Hospital.AdicionaHospital("Hospital de Base", "73365458", 45, 50, 45, 4)
+    Hospital.AdicionaHospital("HRT", "73365459", 55, 30, 60, 3)
+    Hospital.AdicionaHospital("HRG", "73365433", 45, 45, 15, 8)
+    Hospital.AdicionaHospital("HUB", "73365459", 0, 60 , 25, 4)
+    Hospital.AdicionaHospital("Santa Helena", "73365433", 0, 45, 35, 4)
 
     # Pacientes
     # AdicionaPaciente(cpf, nome, dataNascimento, codHospital)

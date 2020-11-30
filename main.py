@@ -23,17 +23,21 @@ from aux import preenche_banco_inicialmente
 # Coisas para fazer no trabalho 
 # - Dentro de ver informações informações personalizadas
 #   - Rastrear contatos(Implementado)
-#   - View(Ver hospitais que estão cheios)
+#   - View(Ver hospitais que estão cheios) (Implementado)
 #   - Ver informações do DF geral
 #   - Ver um relatório geral de 1 Paciente(pelo CPF)
 # - Colocar IF em alguma procedure ou view 
+#
 # Coisas do Relatório 
 # - Introdução 
 # - 5 Consultas envolvendo 3 tabelas
 # - 5 Avaliações das formas normais
-# - ????? A construção da camada de persistência. Enviar os códigos fontes e um diagrama apresentando como a interface gráfica do programa acessa a camada de persistência. ??????? 
+# - ????? A construção da camada de persistência. Enviar os códigos fontes e um 
+#   diagrama apresentando como a interface gráfica do programa acessa a camada de persistência. ??????? 
 
-# preenche_banco_inicialmente()
+
+
+#preenche_banco_inicialmente()
 main()
 
 

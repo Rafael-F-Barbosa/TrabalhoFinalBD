@@ -2,6 +2,7 @@ import os
 from util.formata import imprime_lista_tabela_formatado as formata_tabela
 from util.formata import formata_lista
 from util.OpDb import ChamaProcedure
+from util.OpDb import SelecionaTudo
 
 from entidades.RegioesAdmin import RegioesAdmin
 from entidades.SituacaoAtual import SituacaoAtual
@@ -127,6 +128,43 @@ def VerTabelasRelacoes():
     return False
 
 
+
+
+# NÃO IMPLEMENTADO
+def ConsultasPersonalizadas():
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("O que você deseja fazer ")
+    print("0 - Voltar ao menu principal.")
+    print("1 - Rastrear contatos.")
+    print("2 - Ver Hospitais cheios.")
+    print("3 - Informações gerais do DF")
+
+
+    while(True):
+        try:
+            decisao = int(input(""))
+            if(decisao in [1, 2, 3]):
+                if(decisao == 1):
+                    RastreamentoContatos()
+                elif(decisao == 2):
+                    HospitaisCheios()
+                elif(decisao == 3):
+                   InformacoesDF()
+
+                a = input('Enter para sair')
+                break
+
+            elif(decisao == 0):
+                break
+        except:
+            print("Entrada inválidaa")
+
+    return False    
+
+
+
+
 def RastreamentoContatos():
     while(True):
         try:
@@ -139,25 +177,36 @@ def RastreamentoContatos():
             print('\nProfissionais da Saúde: ')
             formata_tabela(lista2, ['Nome', 'CPF'])
             
-            a = input('Enter para sair')
             break
         except:
             print("Não foi possível encontrar contatos desse paciente.\nTente novamente.")
 
     return False
 
-# NÃO IMPLEMENTADO
-def ConsultasPersonalizadas():
+def HospitaisCheios():
     while(True):
         try:
-            print('Uhuu')
-            populacao = int(input(""))
+            lista = SelecionaTudo("vw_hospitais_cheios")
+            formata_tabela(lista, ['Codigo', 'Nome', 'Cep'])
+
             break
         except:
-            print("Não foi possivel adicionar a região.\nTente novamente.")
+            print("Não foi possível mostrar os hospitais cheios.\nTente novamente.")
 
     return False
 
 
+def InformacoesDF():
+    while(True):
+        try:
+            data = str(input("Data da Situação: "))
+            lista = ChamaProcedure('InformacoesDf', data)
+            
+            print('\nParentes: ')
+            formata_tabela(lista, ['Casos Leves', 'Casos Graves', 'Mortes', 'Recuperados'])
+            
+            break
+        except:
+            print("Não foi possível encontrar contatos desse paciente.\nTente novamente.")
 
-
+    return False
