@@ -9,7 +9,10 @@ from entidades.Medicacoes import Medicacoes
 from entidades.Acoes import Acoes
 from entidades.Parentes import Parente
 
+#---------------------------------------------------------------------------------------
 
+#Função que recebe uma lista de atrinutos de uma classe como entrada e atualiza o valor 
+# escolhido pelo usuário
 def Atualizar(lista):
             
             print("Por qual parâmetro você quer atualizar: ")
@@ -30,6 +33,9 @@ def Atualizar(lista):
 
             return coluna1,valor1, coluna2, valor2
 
+#---------------------------------------------------------------------------------------
+
+
 def AtualizarAcao():
     while(True):
         try:
@@ -41,6 +47,9 @@ def AtualizarAcao():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
+
 def AtualizarHospital():
     while(True):
         try:
@@ -51,6 +60,8 @@ def AtualizarHospital():
             print("Não foi possivel atualizar o Hospital.\nTente novamente.")
 
     return False
+
+#---------------------------------------------------------------------------------------
 
 
 def AtualizarMedicacao():
@@ -64,6 +75,9 @@ def AtualizarMedicacao():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
+
 def AtualizarPaciente():
     while(True):
         try:
@@ -74,6 +88,8 @@ def AtualizarPaciente():
             print("Não foi possivel atualizar o paciente.\nTente novamente.")
 
     return False
+
+#---------------------------------------------------------------------------------------
 
 
 def AtualizarProfissional():
@@ -87,6 +103,8 @@ def AtualizarProfissional():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
 
 def AtualizarParente():
     while(True):
@@ -98,6 +116,8 @@ def AtualizarParente():
             print("Não foi possivel atualizar o parente.\nTente novamente.")
 
     return False
+
+#---------------------------------------------------------------------------------------
 
 
 def AtualizarRegiao():
@@ -111,6 +131,8 @@ def AtualizarRegiao():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
 
 def AtualizarSintomas():
     while(True):
@@ -123,6 +145,9 @@ def AtualizarSintomas():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
+
 def AtualizarSituacao():
     while(True):
         try:
@@ -134,6 +159,9 @@ def AtualizarSituacao():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
+
 def AtualizarTestes():
     while(True):
         try:
@@ -144,3 +172,5 @@ def AtualizarTestes():
             print("Não foi possivel atualizar o teste.\nTente novamente.")
 
     return False
+
+#---------------------------------------------------------------------------------------

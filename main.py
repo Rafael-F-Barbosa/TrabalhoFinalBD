@@ -24,9 +24,11 @@ from aux import preenche_banco_inicialmente
 # - Dentro de ver informações informações personalizadas
 #   - Rastrear contatos(Implementado)
 #   - View(Ver hospitais que estão cheios) (Implementado)
-#   - Ver informações do DF geral
-#   - Ver um relatório geral de 1 Paciente(pelo CPF)
-# - Colocar IF em alguma procedure ou view 
+#   - Ver informações do DF geral (Implementado)
+#   - Ver um relatório geral de 1 Paciente(pelo CPF) (implementado)
+#   - Colocar IF em alguma procedure ou view 
+#   - Mudar 0 e 1 em resultados para Positivo e negativo 
+#   _ Comentar o código (incompleto)
 #
 # Coisas do Relatório 
 # - Introdução 
@@ -34,6 +36,8 @@ from aux import preenche_banco_inicialmente
 # - 5 Avaliações das formas normais
 # - ????? A construção da camada de persistência. Enviar os códigos fontes e um 
 #   diagrama apresentando como a interface gráfica do programa acessa a camada de persistência. ??????? 
+
+# ------------------------------------------------------------------------- 
 
 
 

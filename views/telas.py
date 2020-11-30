@@ -13,7 +13,7 @@ def main():
     while(sair == False):
         os.system('cls' if os.name == 'nt' else 'clear')
         
-        print("\t\tBANCO DE DADOS\n\t\t   COVID19\n")
+        print("\n\n\t\tBANCO DE DADOS\n\t\t   COVID19\n\n")
         print("Pressione enter para começar.")
         a = input('')
         sair = dec_apresenta_funcionalidades()
@@ -26,7 +26,7 @@ def dec_apresenta_funcionalidades():
         while(True):
             try:
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print("O que você deseja fazer: ")
+                print("O que você deseja fazer: \n")
                 print("1 - Ver informações sobre a pandemia.")
                 print("2 - Adicionar dados sobre a pandemia.")
                 print("3 - Adicionar relacionamenos.")
@@ -65,7 +65,7 @@ def dec_apresenta_funcionalidades():
 
 def dec_ver_informacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Consultas personalizadas.")
     print("2 - Ver tabelas de dados.")
@@ -96,7 +96,7 @@ def dec_ver_informacoes():
 
 def dec_adicionar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Adicionar regiao administrativa.")
     print("2 - Adicionar situacao atual.")
@@ -155,7 +155,7 @@ def dec_adicionar_dados():
 
 def dec_adicionar_relacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Relacionar parentes e pacientes.")
     print("2 - Relacionar profissionais da saúde e pacientes.")
@@ -199,7 +199,7 @@ def dec_adicionar_relacoes():
 
 def dec_atualizar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Atualizar regiao administrativa.")
     print("2 - Atualizar situacao atual.")
@@ -259,7 +259,7 @@ def dec_atualizar_dados():
 # decide em qual tabela será feita a atualização de relacao
 def dec_atualizar_relacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Atualizar parentes e pacientes.")
     print("2 - Atualizar profissionais da saúde e pacientes.")
@@ -304,7 +304,7 @@ def dec_atualizar_relacoes():
 # decide em qual tabela será deletado 
 def dec_deletar_dados():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Deletar regiao administrativa.")
     print("2 - Deletar situacao atual.")
@@ -376,7 +376,7 @@ def dec_deletar_dados():
  
 def dec_deletar_relacoes():
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("O que você deseja fazer ")
+    print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
     print("1 - Deletar relação entre parentes e pacientes.")
     print("2 - Deletar relação entre profissionais da saúde e pacientes.")

@@ -89,16 +89,18 @@ def preenche_banco_inicialmente():
     # TestesPacientes
     # AdicionaTestesPacientes(dataTestes, resultados, codTeste, cpfPaciente)
     TestesPacientes.AdicionaTestesPacientes("2020-11-17", 1, 1, '18229735114')
-    TestesPacientes.AdicionaTestesPacientes("2020-11-19", 1, 2, '18229744112')
+    TestesPacientes.AdicionaTestesPacientes("2020-10-19", 1, 2, '18229744112')
     TestesPacientes.AdicionaTestesPacientes("2020-11-12", 1, 3, '28229735118')
-    TestesPacientes.AdicionaTestesPacientes("2020-11-15", 1, 2, '18229735113')
+    TestesPacientes.AdicionaTestesPacientes("2020-10-15", 1, 2, '18229735113')
     TestesPacientes.AdicionaTestesPacientes("2020-11-14", 1, 3, '18229735119')
+    TestesPacientes.AdicionaTestesPacientes("2020-11-24", 0, 5, '18229735114')
+    TestesPacientes.AdicionaTestesPacientes("2020-10-17", 0, 1, '18229735114')
 
     # Sintomas # Mudar esse tipo físico ou psico pra gravidade do sintoma
-    Sintomas.AdicionaSintomas("Febre", "Fisico")
-    Sintomas.AdicionaSintomas("Tosse seca", "Fisico")
-    Sintomas.AdicionaSintomas("Cansaço", "Fisico")
-    Sintomas.AdicionaSintomas("Perda de olfato", "Fisico")
+    Sintomas.AdicionaSintomas("Febre", "Físico")
+    Sintomas.AdicionaSintomas("Tosse seca", "Físico")
+    Sintomas.AdicionaSintomas("Cansaço", "Físico")
+    Sintomas.AdicionaSintomas("Perda de olfato", "Físico")
     Sintomas.AdicionaSintomas("Dor ou pressão no peito", "Físico")
 
     # SintomasPacientes
@@ -108,6 +110,9 @@ def preenche_banco_inicialmente():
     SintomasPacientes.AdicionaSintomasPacientes("2020-10-19", 3, '28229735118')
     SintomasPacientes.AdicionaSintomasPacientes("2020-10-15", 4, '18229735113')
     SintomasPacientes.AdicionaSintomasPacientes("2020-10-14", 2, '18229735119')
+    SintomasPacientes.AdicionaSintomasPacientes("2020-11-11", 1, '18229735114')
+    SintomasPacientes.AdicionaSintomasPacientes("2020-11-20", 5, '18229735114')
+
 
     # Medicacoes
     Medicacoes.AdicionaMedicacoes("Ozônio")
@@ -119,6 +124,8 @@ def preenche_banco_inicialmente():
     # Medicacoes Pacientes
     # AdicionaMedicacoesPacientes(dataMed, Dosagem, codMedicacao, cpfPaciente)
     MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-17", '50g',1,'18229735114')
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-27", '10 gotas',2,'18229735114')
+    MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-11-22", '3 comprimidos',3,'18229735114')
     MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-18", '75g',4,'18229744112')
     MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-19", '100g',2,'28229735118')
     MedicacoesPacientes.AdicionaMedicacoesPacientes("2020-10-20", '10 gotas',2,'18229735113')

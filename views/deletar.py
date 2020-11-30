@@ -11,7 +11,9 @@ from entidades.Parentes import Parente
 
 import util.OpDb as OpDb
 
+#---------------------------------------------------------------------------------------
 
+#Função que deleta o ítem de uma tabela
 def Deletar(tabela, lista):
             
     print("Por qual parâmetro você quer deletar: ")
@@ -26,4 +28,6 @@ def Deletar(tabela, lista):
     valor = str(input(""))
 
     OpDb.Deleta(tabela, lista[coluna-1], valor)
+
+#---------------------------------------------------------------------------------------
 

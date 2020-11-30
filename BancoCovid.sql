@@ -175,6 +175,28 @@ CREATE PROCEDURE InformacoesDf(d DATE)
 SELECT SUM(CasosLeves), SUM(CasosGraves), SUM(Mortes), SUM(Recuperados) FROM SituacaoAtual
 WHERE DataSituacao = d;
 
+DROP PROCEDURE IF EXISTS RastreiaMedicacoesPacientes;
+
+CREATE PROCEDURE RastreiaMedicacoesPacientes(CPF VARCHAR(11))
+SELECT Nome, Dosagem, DataMed
+FROM Medicacoes, MedicacoesPacientes
+WHERE MedicacoesPacientes.CpfPaciente = CPF AND Medicacoes.Codigo = MedicacoesPacientes.CodMedicacao;
+
+DROP PROCEDURE IF EXISTS RastreiaTestesPacientes;
+
+CREATE PROCEDURE RastreiaTestesPacientes(CPF VARCHAR(11))
+SELECT Nome, DataTeste, Resultado
+FROM Testes, TestesPacientes
+WHERE TestesPacientes.CpfPaciente = CPF AND Testes.Codigo = TestesPacientes.CodTeste;
+
+DROP PROCEDURE IF EXISTS RastreiaSintomasPacientes;
+
+CREATE PROCEDURE RastreiaSintomasPacientes(CPF VARCHAR(11))
+SELECT Nome, Tipo, DataSintoma
+FROM Sintomas, SintomasPacientes
+WHERE SintomasPacientes.CpfPaciente = CPF AND Sintomas.Codigo = SintomasPacientes.CodSintoma;
+
+
 
 -- Views
 

@@ -139,18 +139,22 @@ def ConsultasPersonalizadas():
     print("1 - Rastrear contatos.")
     print("2 - Ver Hospitais cheios.")
     print("3 - Informações gerais do DF")
+    print("4 - Relatório Paciente")
+
 
 
     while(True):
         try:
             decisao = int(input(""))
-            if(decisao in [1, 2, 3]):
+            if(decisao in [1, 2, 3, 4]):
                 if(decisao == 1):
                     RastreamentoContatos()
                 elif(decisao == 2):
                     HospitaisCheios()
                 elif(decisao == 3):
                    InformacoesDF()
+                elif(decisao == 4):
+                   RelatorioPaciente()
 
                 a = input('Enter para sair')
                 break
@@ -204,6 +208,30 @@ def InformacoesDF():
             
             print('\nParentes: ')
             formata_tabela(lista, ['Casos Leves', 'Casos Graves', 'Mortes', 'Recuperados'])
+            
+            break
+        except:
+            print("Não foi possível encontrar contatos desse paciente.\nTente novamente.")
+
+    return False
+
+
+def RelatorioPaciente():
+    while(True):
+        try:
+            cpf = str(input("CPF Paciente: "))
+            lista1 = ChamaProcedure('RastreiaMedicacoesPacientes', cpf)
+            lista2 = ChamaProcedure('RastreiaTestesPacientes', cpf)
+            lista3 = ChamaProcedure('RastreiaSintomasPacientes', cpf)
+            
+            print('\nMedicacoes: ')
+            formata_tabela(lista1, ['Nome', 'Dosagem', 'DataMed'])
+
+            print('\nTestes: ')
+            formata_tabela(lista2, ['Nome', 'Data', 'Resultado'])
+
+            print('\nSintomas: ')
+            formata_tabela(lista3, ['Nome', 'Tipo', 'Data'])
             
             break
         except:
