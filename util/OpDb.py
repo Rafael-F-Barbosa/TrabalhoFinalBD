@@ -47,7 +47,8 @@ def InsereTudo(tabela, dicio):
         cursor.execute(sql, tuple(val))
         conn.commit()
     except Error as err:
-        print("Deu ruim: {}".format(err))
+        print("Não foi possível realizar a operação: {}".format(err))
+        a = input("")
 
 
 def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
@@ -66,7 +67,7 @@ def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
         cursor.execute(sql)
         conn.commit()
     except Error as err:
-        print("Deu ruim: {}".format(err))
+        print("Não foi possível realizar a operação: {}".format(err))
         a = input("")
 
 
@@ -85,7 +86,7 @@ def Deleta(tabela, coluna, valor):
         cursor.execute(sql)
         conn.commit()
     except Error as err:
-        print("Deu ruim: {}".format(err))
+        print("Não foi possível realizar a operação: {}".format(err))
         a = input("")
 
 def ChamaProcedure(nome, cpf):
@@ -100,7 +101,7 @@ def ChamaProcedure(nome, cpf):
             return result.fetchall()
 
     except Error as err:
-        print("Deu ruim: {}".format(err))
+        print("Não foi possível realizar a operação: {}".format(err))
         a = input("")
     
-    return False;
+    return False
