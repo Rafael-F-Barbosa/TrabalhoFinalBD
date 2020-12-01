@@ -4,28 +4,29 @@ from .GetDb import CreatePool
 
 
 def SelecionaTudo(tabela):
-    # Banco de dados
-
+    # Conexão ao banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
 
-    # Faz a busca SQL
+    # Cria script sql básico
     sql = "select * from "+ tabela
     print('Operacao: ', sql)
 
+    # Faz a busca
     cursor.execute(sql)
 
     # Coloca items buscados em uma lista
     lista = cursor.fetchall()
 
+    # Retorna a lista
     return lista
 
 def InsereTudo(tabela, dicio):
-    # Banco de dados
+    # Conexão ao banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
 
-    # Criando SQL
+    # Cria script sql genérico
     colunas = "("
     valores = "("
     val = []
@@ -36,10 +37,12 @@ def InsereTudo(tabela, dicio):
     colunas = colunas[:-2] + ')'
     valores = valores[:-2] + ')'
     sql = "INSERT INTO "+ tabela + colunas + " VALUES " + valores
+    # Comentados a impressão da operação e os dados inseridos
     #print('Operacao: ', sql)
     #print(val)
     # a = input("")
-    # Inserindo na Tabela
+
+    # Inserção dos dados na tabela
     try: 
         cursor.execute(sql, tuple(val))
         conn.commit()
@@ -48,12 +51,14 @@ def InsereTudo(tabela, dicio):
 
 
 def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
-    # Banco de dados
+    # Conexão ao banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
 
-    # Criando SQL
+    # Criando SQL genérico
     sql = "UPDATE "+ tabela + " SET " + coluna1 + " = '" + valor1 + "' WHERE " + coluna2 + " = " + valor2
+    
+    # Comentados a impressão da operação e os dados inseridos
     #print('Operacao: ', sql)
     #a = input("")
     # Inserindo na Tabela
@@ -66,8 +71,7 @@ def AtualizaTudo(tabela, coluna1, valor1, coluna2, valor2):
 
 
 def Deleta(tabela, coluna, valor):
-
-    # Banco de dados
+    # Conexão ao banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
 
@@ -75,7 +79,8 @@ def Deleta(tabela, coluna, valor):
     sql = "DELETE FROM "+ tabela + " WHERE " + coluna + " = " + valor
     #print('Operacao: ', sql)
     #a = input("")
-    # Inserindo na Tabela
+
+    # Deletando da Tabela
     try: 
         cursor.execute(sql)
         conn.commit()
@@ -84,10 +89,11 @@ def Deleta(tabela, coluna, valor):
         a = input("")
 
 def ChamaProcedure(nome, cpf):
-    # Banco de dados
+    # Conexão ao banco de dados
     conn = CreatePool().get_connection()
     cursor = conn.cursor()
 
+    # Chamando procedure e retornando a busca que a mesma retorna
     try:
         cursor.callproc(nome, [cpf])
         for result in cursor.stored_results():

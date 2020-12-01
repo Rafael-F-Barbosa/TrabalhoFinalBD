@@ -13,20 +13,16 @@ import util.OpDb as OpDb
 
 #---------------------------------------------------------------------------------------
 
-#Função que deleta o ítem de uma tabela
+#Função que deleta o item de uma tabela
 def Deletar(tabela, lista):
-            
+    # Escolhe parâmetro que será utilizado para deletar um item da tabela
     print("Por qual parâmetro você quer deletar: ")
-
     for l in range(len(lista)):
         print(l + 1, " - ", lista[l])
-
     coluna = int(input(""))
-
+    # Digita o novo valor que será inserido no banco de dados
     print("Qual o valor do ", lista[coluna - 1], " que você deseja deletar: ")
-
     valor = str(input(""))
-
     OpDb.Deleta(tabela, lista[coluna-1], valor)
 
 #---------------------------------------------------------------------------------------

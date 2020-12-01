@@ -7,24 +7,31 @@ from views.atualizar_relacoes import *
 import views.deletar as deletar
 
 
+#---------------------------------------------------------------------------------------
 
+# Abre tela inicial, apresentando o nome do trabalho e a disciplina
 def main():
     sair = False
     while(sair == False):
         os.system('cls' if os.name == 'nt' else 'clear')
-        
         print("\n\n\t\tBANCO DE DADOS\n\t\t   COVID19\n\n")
         print("Pressione enter para começar.")
         a = input('')
         sair = dec_apresenta_funcionalidades()
 
+    # Quando o loop da main é quebrado o programa é finalizado
     print("Programa encerrado.")
 
+#---------------------------------------------------------------------------------------
+
+# Apresenta uma tela com as funções principais que o aplicativo fornece
+# Direciona o aplicativo para cada funcionalidade
 def dec_apresenta_funcionalidades():
     sair = False
     while(sair == False):
         while(True):
             try:
+                # Lista opções de funcionalidades
                 os.system('cls' if os.name == 'nt' else 'clear')
                 print("O que você deseja fazer: \n")
                 print("1 - Ver informações sobre a pandemia.")
@@ -41,7 +48,7 @@ def dec_apresenta_funcionalidades():
                     break
             except:
                 print("Entrada inválida")
-
+        # Faz o direcionamento
         if(decisao == 1):
             sair = dec_ver_informacoes()
         elif(decisao == 2):
@@ -63,7 +70,11 @@ def dec_apresenta_funcionalidades():
 
     return False
 
+#---------------------------------------------------------------------------------------
+
+# Detalha as informações que o usuário pode obter no nosso banco de dados
 def dec_ver_informacoes():
+    # Lista informção dos banco de dados
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -78,23 +89,24 @@ def dec_ver_informacoes():
                 break
         except:
             print("Entrada inválida")
-
+    # Faz direcionamento 
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         return ConsultasPersonalizadas()
-
     elif(decisao == 2):
         return VerTabelasDados()
-
     elif(decisao == 3):
         return VerTabelasRelacoes()
 
+    # Retorna ao menu principal
     return False
 
+#---------------------------------------------------------------------------------------
 
+# Lista as tabelas e direciona para adição de cada tipo de dado
 def dec_adicionar_dados():
+    # Lista tabelas de dados
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -117,43 +129,38 @@ def dec_adicionar_dados():
         except:
             print("Entrada inválida")
 
+    # Faz o direcionamento
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         return AdicionarRegiaoAdmin()
-
     elif(decisao == 2):
         return AdicionarSituacaoAtual()
-
     elif(decisao == 3):
         return AdicionarAcao()
-
     elif(decisao == 4):
         return AdicionarHospital()
-
     elif(decisao == 5):
         return AdicionarPaciente()
-
     elif(decisao == 6):
         return AdicionarTeste()
-
     elif(decisao == 7):
         return AdicionarSintoma()
-
     elif(decisao == 8):
         return AdicionarMedicacao()
-
     elif(decisao == 9):
         return AdicionarProfissional()
-
     elif(decisao == 10):
         return AdicionarParente()
-
+    # Volta ao menu principal
     return False
 
 
+#---------------------------------------------------------------------------------------
+
+# Lista as tabelas de relações e direciona para as funções de adição de relações
 def dec_adicionar_relacoes():
+    # Lista relações
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -172,32 +179,30 @@ def dec_adicionar_relacoes():
         except:
             print("Entrada inválida")
 
+    # Faz o direcionamento
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         return AdicionarParentesPacientes()
-
     elif(decisao == 2):
         return AdicionarProfissionaisPacientes()
-
     elif(decisao == 3):
         return AdicionarProfissionaisHospitais()
-
     elif(decisao == 4):
         return AdicionarPacientesMedicacoes()
-
     elif(decisao == 5):
         return AdicionarPacientesSintomas()
-
     elif(decisao == 6):
         return AdicionarPacientesTestes()
 
-
+    # Retorna ao menu principal
     return False
 
+#---------------------------------------------------------------------------------------
 
+# Lista os tabelas de dados que podem ser atualizados e direciona paras funções execução
 def dec_atualizar_dados():
+    # Lista tabelas de dados para atualizações
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -220,44 +225,39 @@ def dec_atualizar_dados():
         except:
             print("Entrada inválida")
 
+    # Faz o direcionamento
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         return AtualizarRegiao()
-
     elif(decisao == 2):
         return AtualizarSituacao()
-
     elif(decisao == 3):
         return AtualizarAcao()
-
     elif(decisao == 4):
         return AtualizarHospital()
-
     elif(decisao == 5):
         return AtualizarPaciente()
-
     elif(decisao == 6):
         return AtualizarTestes()
-
     elif(decisao == 7):
         return AtualizarSintomas()
-
     elif(decisao == 8):
         return AtualizarMedicacao()
-
     elif(decisao == 9):
         return AtualizarProfissional()
-
     elif(decisao == 10):
         return AtualizarParente()
-
+    
+    # Retorna ao menu principal
     return False
 
 
-# decide em qual tabela será feita a atualização de relacao
+#---------------------------------------------------------------------------------------
+
+# Lista tabelas de relações e direciona para as tabelas de execução da atualização
 def dec_atualizar_relacoes():
+    # Lista tabelas de relações para atualizações
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -276,33 +276,30 @@ def dec_atualizar_relacoes():
         except:
             print("Entrada inválida")
 
+    # Faz o direcionamento
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         return AtualizarParentePaciente()
-
     elif(decisao == 2):
         return AtualizarProfissionalPaciente()
-
     elif(decisao == 3):
         return AtualizarProfissionalHospital()
-
     elif(decisao == 4):
         return AtualizarMedicacoesPaciente()
-
     elif(decisao == 5):
         return AtualizarSintomasPacientes()
-
     elif(decisao == 6):
         return AtualizarTestesPacientes()
 
-
+    # Retorna ao menu principal
     return False
 
+#---------------------------------------------------------------------------------------
 
-# decide em qual tabela será deletado 
+# Lista tabelas de dados e direciona para as tabelas de execução da exclusão
 def dec_deletar_dados():
+    # Lista tabelas de dados para exclusão
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -325,56 +322,51 @@ def dec_deletar_dados():
         except:
             print("Entrada inválida")
 
+    # Faz o direcionamento
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         lista = RegioesAdmin.dicio
         tabela = "RegiaoAdmin"
-
     elif(decisao == 2):
         lista = SituacaoAtual.dicio
         tabela = "SituacaoAtual"
-
     elif(decisao == 3):
         lista = Acoes.dicio
         tabela = "Acoes"
-
     elif(decisao == 4):
         lista = Hospitais.dicio
         tabela = "Hospitais"
-
     elif(decisao == 5):
         lista = Paciente.dicio
         tabela = "Pacientes"
-
     elif(decisao == 6):
         lista = Testes.dicio
         tabela = "Testes"
-
     elif(decisao == 7):
         lista = Sintomas.dicio
         tabela = "Sintomas"
-
     elif(decisao == 8):
         lista = Medicacoes.dicio
         tabela = "Medicacoes"
-
     elif(decisao == 9):
         lista = ProfissionaisSaude.dicio
         tabela = "ProfissionaisSaude"
-
     elif(decisao == 10):
         lista = Parente.dicio
         tabela = "Parentes"
 
+    # Chama a função genérica
     deletar.Deletar(tabela, lista)
 
-
+    # Retorna ao menu principal
     return False
 
- 
+#---------------------------------------------------------------------------------------
+
+# Lista tabelas de relações e direciona para as tabelas de execução da exclusão
 def dec_deletar_relacoes():
+    # Lista tabelas de relações para exclusões
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer \n")
     print("0 - Voltar ao menu principal.")
@@ -393,33 +385,31 @@ def dec_deletar_relacoes():
         except:
             print("Entrada inválida")
 
+    # Faz o direcionamento
     if(decisao == 0):
         return False
-
     elif(decisao == 1):
         lista = ParentePaciente.dicio
         tabela = "ParentePaciente"
-
     elif(decisao == 2):
         lista = ProfAtendePaciente.dicio
         tabela = "ProfAtendePaciente"
-
     elif(decisao == 3):
         lista = ProfTrabalhaHospital.dicio
         tabela = "ProfTrabalhaHospital"
-
     elif(decisao == 4):
         lista = MedicacoesPacientes.dicio
         tabela = "MedicacoesPacientes"
-
     elif(decisao == 5):
         lista = SintomasPacientes.dicio
         tabela = "SintomasPacientes"
-
     elif(decisao == 6):
         lista = TestesPacientes.dicio
         tabela = "TestesPacientes"
 
     deletar.Deletar(tabela, lista)
 
+    # Retorna ao menu principal
     return False
+
+#---------------------------------------------------------------------------------------

@@ -24,7 +24,7 @@ from entidades.ParentePaciente import ParentePaciente
 
 #---------------------------------------------------------------------------------------
 
-#Função que escolhe qual tabela de dados será mostrada
+# Função que escolhe qual tabela de dados será mostrada
 def VerTabelasDados():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("O que você deseja fazer ")
@@ -42,9 +42,9 @@ def VerTabelasDados():
 
     while(True):
         try:
-            #Pega a resposta do usuario
+            # Pega a resposta do usuario
             decisao = int(input(""))
-            #De acordo com a resposta do usuário, chama a função que lista os ítens da 
+            # De acordo com a resposta do usuário, chama a função que lista os ítens da 
             # classe escolhida, e depois chama a função formata_tabela que formata para 
             # mostrar para o usuário
             if(decisao in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]):
@@ -81,17 +81,17 @@ def VerTabelasDados():
                 
                 a = input('Enter para sair')
                 break
-            #volta ao menu principal
+            # Volta ao menu principal
             elif(decisao == 0):
                 break
         except:
-            #Caso o usuário coloque uma entrada inválida
+            # Caso o usuário coloque uma entrada inválida
             print("Entrada inválida")
 
     return False
 #---------------------------------------------------------------------------------------
 
-#Função que escolhe qual tabela de relações será mostrada
+# Função que escolhe qual tabela de relações será mostrada
 def VerTabelasRelacoes():
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -106,9 +106,9 @@ def VerTabelasRelacoes():
 
     while(True):
         try:
-            #Pega a resposta do usuário
+            # Pega a resposta do usuário
             decisao = int(input(""))
-            #De acordo com a resposta do usuário, chama a função que lista os ítens da 
+            # De acordo com a resposta do usuário, chama a função que lista os ítens da 
             # classe escolhida, e depois chama a função formata_tabela que formata para 
             # mostrar para o usuário
             if(decisao in [1, 2, 3, 4, 5, 6]):
@@ -133,11 +133,11 @@ def VerTabelasRelacoes():
                 
                 a = input('Enter para sair')
                 break
-            #volta ao menu principal
+            # volta ao menu principal
             elif(decisao == 0):
                 break
         except:
-            #Caso o suário coloque uma entrada inválida
+            # Caso o suário coloque uma entrada inválida
             print("Entrada inválida")
 
     return False
@@ -145,7 +145,7 @@ def VerTabelasRelacoes():
 
 #---------------------------------------------------------------------------------------
 
-#Função que escolhe qual consulta personalizada será realizada
+# Função que escolhe qual consulta personalizada será realizada
 def ConsultasPersonalizadas():
 
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -161,9 +161,9 @@ def ConsultasPersonalizadas():
 
     while(True):
         try:
-            #Pega a resposta do usuário
+            # Pega a resposta do usuário
             decisao = int(input(""))
-            #De a cordo com a resposta do usuário, chama a função da consulta personalizada desejada
+            # De a cordo com a resposta do usuário, chama a função da consulta personalizada desejada
             if(decisao in [1, 2, 3, 4, 5]):
                 if(decisao == 1):
                     RastreamentoContatos()
@@ -178,29 +178,29 @@ def ConsultasPersonalizadas():
 
                 a = input('Enter para sair')
                 break
-            #volta ao menu principal
+            # Volta ao menu principal
             elif(decisao == 0):
                 break
         except:
-            #Caso o usuário coloque uma entrada inválida
+            # Caso o usuário coloque uma entrada inválida
             print("Entrada inválidaa")
 
     return False    
 
 #---------------------------------------------------------------------------------------
 
-#Função que retorna os parentes e profissionais da saúde de um paciente
+# Função que retorna os parentes e profissionais da saúde de um paciente
 def RastreamentoContatos():
     while(True):
         try:
-            #pega o Cpf do paciente desejado
+            # Pega o Cpf do paciente desejado
             cpf = str(input("CPF Paciente: "))
 
-            #chama as procedures RastreiaParentesPacientes e RastreiaProfsPacientes
+            # Chama as procedures RastreiaParentesPacientes e RastreiaProfsPacientes
             lista1 = ChamaProcedure('RastreiaParentesPacientes', cpf)
             lista2 = ChamaProcedure('RastreiaProfsPacientes', cpf)
             
-            #mostra os parentes e os profissionais da saúde relacionados com o paciente
+            # Mostra os parentes e os profissionais da saúde relacionados com o paciente
             print('\nParentes: ')
             formata_tabela(lista1, ['Nome', 'CPF'])
             print('\nProfissionais da Saúde: ')
@@ -208,106 +208,106 @@ def RastreamentoContatos():
             
             break
         except:
-            #Caso nao seja possível encontrar os contatos do paciente
+            # Caso nao seja possível encontrar os contatos do paciente
             print("Não foi possível encontrar contatos desse paciente.\nTente novamente.")
 
     return False
 
 #---------------------------------------------------------------------------------------
 
-#Função que mostra todos os hospitais que tem zero leitos disponíveis
+# Função que mostra todos os hospitais que tem zero leitos disponíveis
 def HospitaisCheios():
     while(True):
         try:
-            #Pega os ítens que estão na view vw_hospitais_cheios
+            # Pega os ítens que estão na view vw_hospitais_cheios
             lista = SelecionaTudo("vw_hospitais_cheios")
 
 
-            #Mostra os ítens formatados para o usuário
+            # Mostra os ítens formatados para o usuário
             print('\nHospitais cheios: ')
             formata_tabela(lista, ['Codigo', 'Nome', 'Cep'])
 
             break
         except:
-            #Caso nao seja possível mostrar os hospitais cheios
+            # Caso nao seja possível mostrar os hospitais cheios
             print("Não foi possível mostrar os hospitais cheios.\nTente novamente.")
 
     return False
 
 #---------------------------------------------------------------------------------------
 
-#Funçãoq eu mostra as informações gerais do distrito federal, somando as situações de cada
+# Funçãoq eu mostra as informações gerais do distrito federal, somando as situações de cada
 # região de uma data especifica
 def InformacoesDF():
     while(True):
         try:
-            #Pega do usuário a data desejada
+            # Pega do usuário a data desejada
             data = str(input("Data da Situação: "))
-            #Chama a procedure InformacoesDf passando como parâmetro a data informada
+            # Chama a procedure InformacoesDf passando como parâmetro a data informada
             lista = ChamaProcedure('InformacoesDf', data)
             
-            #Mostra a saída da procedure.
+            # Mostra a saída da procedure.
             print('\nSituação Geral do DF: ')
-            #Formata a lista para ser mostrada ao usuário
+            # Formata a lista para ser mostrada ao usuário
             formata_tabela(lista, ['Casos Leves', 'Casos Graves', 'Mortes', 'Recuperados'])
             
             break
         except:
-            #Caso nao seja possivel mostrar a situação geral do DF
+            # Caso nao seja possivel mostrar a situação geral do DF
             print("Não foi possível mostrar a situação geral do DF.\nTente novamente.")
 
     return False
 
 #---------------------------------------------------------------------------------------
 
-#Função que mostra todos as medicações, testes e sintomas de um paciente
+# Função que mostra todos as medicações, testes e sintomas de um paciente
 def RelatorioPaciente():
     while(True):
         try:
-            #Pega o CPF do paciente desejado 
+            # Pega o CPF do paciente desejado 
             cpf = str(input("CPF Paciente: "))
 
-            #Chama as procedures RastreiaMedicacoesPacientes, RastreiaTestesPacientes e
-            #  RastreiaSintomasPacientes, utilizando o CPF informado
+            # Chama as procedures RastreiaMedicacoesPacientes, RastreiaTestesPacientes e
+            # RastreiaSintomasPacientes, utilizando o CPF informado
             lista1 = ChamaProcedure('RastreiaMedicacoesPacientes', cpf)
             lista2 = ChamaProcedure('RastreiaTestesPacientes', cpf)
             lista3 = ChamaProcedure('RastreiaSintomasPacientes', cpf)
             
-            #Mostra as informações formatadas das medicações
+            # Mostra as informações formatadas das medicações
             print('\nMedicacoes: ')
             formata_tabela(lista1, ['Nome', 'Dosagem', 'DataMed'])
 
-            #Mostra as informações formatadas dos testes
+            # Mostra as informações formatadas dos testes
             print('\nTestes: ')
             formata_tabela(lista2, ['Nome', 'Data', 'Resultado'])
 
-            #Mostra as informações formatadas dos sintomas
+            # Mostra as informações formatadas dos sintomas
             print('\nSintomas: ')
             formata_tabela(lista3, ['Nome', 'Tipo', 'Data'])
             
             break
         except:
-            #Caso não seja possível mostrar o relatório do paciente
+            # Caso não seja possível mostrar o relatório do paciente
             print("Não foi possível encontrar o relatório do paciente.\nTente novamente.")
 
     return False
 
 #---------------------------------------------------------------------------------------
 
-#Função que mostra os pacientes com mais de 60 anos
+# Função que mostra os pacientes com mais de 60 anos
 def PacientesGrupoRisco():
     while(True):
         try:
-            #pega ítens da view vw_grupo_risco
+            # Pega ítens da view vw_grupo_risco
             lista = SelecionaTudo("vw_grupo_risco")
 
-            #Mostra os ítens formatados para  usuário
+            # Mostra os ítens formatados para  usuário
             print('\nPacientes do Grupo de Risco: ')
             formata_tabela(lista, ['Cpf', 'Nome'])
 
             break
         except:
-            #Caso naão seja possível mostrar os pacientes do grupo de risco
+            # Caso naão seja possível mostrar os pacientes do grupo de risco
             print("Não foi possível mostrar os pacientes do grupo de risco.\nTente novamente.")
 
     return False
