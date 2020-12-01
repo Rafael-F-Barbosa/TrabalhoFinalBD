@@ -27,21 +27,19 @@ from aux import preenche_banco_inicialmente
 #   - Ver informações do DF geral (Implementado)
 #   - Ver um relatório geral de 1 Paciente(pelo CPF) (implementado)
 #   - Colocar IF em alguma procedure ou view 
-#   - Mudar 0 e 1 em resultados para Positivo e negativo 
-#   _ Comentar o código (incompleto)
+#   - Mudar 0 e 1 em resultados para Positivo e negativo (implementado)
+#   - Comentar o código (incompleto)
 #
 # Coisas do Relatório 
 # - Introdução 
 # - 5 Consultas envolvendo 3 tabelas
 # - 5 Avaliações das formas normais
-# - ????? A construção da camada de persistência. Enviar os códigos fontes e um 
-#   diagrama apresentando como a interface gráfica do programa acessa a camada de persistência. ??????? 
 
 # ------------------------------------------------------------------------- 
 
 
 
-#preenche_banco_inicialmente()
+# preenche_banco_inicialmente()
 main()
 
 

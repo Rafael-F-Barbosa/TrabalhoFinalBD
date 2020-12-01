@@ -13,8 +13,16 @@ class TestesPacientes:
 
     #Métodos que lista todos os ítens dessa classe presentes no banco
     def ListaTestesPacientes():
-        return OpDb.SelecionaTudo('TestesPacientes')
-
+        lista = OpDb.SelecionaTudo('TestesPacientes')
+        lista_editada = []
+        for x in range(len(lista)):
+            lista_editada.append(list(lista[x]))
+            if (int(lista_editada[x][1]) == 0):
+                lista_editada[x][1] = 'Negativo'
+            else:
+                lista_editada[x][1] = 'Positivo'
+                
+        return lista_editada
     #Método que adiciona um ítem dessa classe ao banco
     def AdicionaTestesPacientes(dataTestes, resultados, codTeste, cpfPaciente):
         dicioRegiao = {}

@@ -4,7 +4,7 @@ def CreatePool():
     dbconfig = {
         "host": "localhost",
         "user": "root",
-        "password": "gera2908",
+        "password": "Qaz1234!",
         "database": "BancoCovid",
     }
     try:

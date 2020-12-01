@@ -135,10 +135,10 @@ def preenche_banco_inicialmente():
     # ProfissionaisSaude
     # AdicionaProfissionaisSaude(cpf, nome, profissao, teveCovid)
     ProfissionaisSaude.AdicionaProfissionaisSaude("18229335112", "Marina Pinho", "Médica", 1)
-    ProfissionaisSaude.AdicionaProfissionaisSaude("18221135114", "Larissa Cosa", "Segurança", 2)
-    ProfissionaisSaude.AdicionaProfissionaisSaude("18229710115", "Jonas Silva", "Enfermeiro", 3)
-    ProfissionaisSaude.AdicionaProfissionaisSaude("18129735317", "Eduardo Pereira", "Médico", 4)
-    ProfissionaisSaude.AdicionaProfissionaisSaude("14229735111", "Mariana Garcia", "Médica", 5)
+    ProfissionaisSaude.AdicionaProfissionaisSaude("18221135114", "Larissa Cosa", "Segurança", 0)
+    ProfissionaisSaude.AdicionaProfissionaisSaude("18229710115", "Jonas Silva", "Enfermeiro", 0)
+    ProfissionaisSaude.AdicionaProfissionaisSaude("18129735317", "Eduardo Pereira", "Médico", 1)
+    ProfissionaisSaude.AdicionaProfissionaisSaude("14229735111", "Mariana Garcia", "Médica", 1)
 
     # ProfTrabalhaHospital
     # AdicionaProfTrabalhaHospital(codHospital, cpfProfissional)
