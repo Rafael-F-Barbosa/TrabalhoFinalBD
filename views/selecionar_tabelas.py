@@ -279,7 +279,15 @@ def RelatorioPaciente():
 
             # Mostra as informações formatadas dos testes
             print('\nTestes: ')
-            formata_tabela(lista2, ['Nome', 'Data', 'Resultado'])
+            lista_editada = []
+            for x in range(len(lista2)):
+                lista_editada.append(list(lista2[x]))
+            if (int(lista_editada[x][1]) == 0):
+                lista_editada[x][1] = 'Negativo'
+            else:
+                lista_editada[x][1] = 'Positivo'
+                
+            formata_tabela(lista_editada, ['Nome', 'Data', 'Resultado'])
 
             # Mostra as informações formatadas dos sintomas
             print('\nSintomas: ')

@@ -71,13 +71,13 @@ def preenche_banco_inicialmente():
 
     # Pacientes
     # AdicionaPaciente(cpf, nome, dataNascimento, codHospital)
-    Paciente.AdicionaPaciente("18229735114", "Joãozinho da Silva", "1993-02-21", 1) # tentando inserir o mesmo CPF pra testar erros
-    Paciente.AdicionaPaciente("18229744112", "Maria das Luzes", "1988-09-23", 2) # tentando inserir o mesmo CPF pra testar erros
-    Paciente.AdicionaPaciente("28229735118", "Marquinhos Lightning", "1998-08-21", 3) # tentando inserir o mesmo CPF pra testar erros
-    Paciente.AdicionaPaciente("18229735113", "Mariana Fagundes", "1978-12-21", 4) # tentando inserir o mesmo CPF pra testar erros
-    Paciente.AdicionaPaciente("18229735119", "Wilson dos Santos", "2000-05-22", 5) # tentando inserir o mesmo CPF pra testar erros
-    Paciente.AdicionaPaciente("18229735111", "Juliana Freitas", "1950-12-21", 4) # tentando inserir o mesmo CPF pra testar erros
-    Paciente.AdicionaPaciente("18229735122", "Daniel dos Santos", "1942-07-23", 2) # tentando inserir o mesmo CPF pra testar erros
+    Paciente.AdicionaPaciente("18229735114", "Joãozinho da Silva", "1993-02-21", 1) 
+    Paciente.AdicionaPaciente("18229744112", "Maria das Luzes", "1988-09-23", 2) 
+    Paciente.AdicionaPaciente("28229735118", "Marquinhos Lightning", "1998-08-21", 3) 
+    Paciente.AdicionaPaciente("18229735113", "Mariana Fagundes", "1978-12-21", 4) 
+    Paciente.AdicionaPaciente("18229735119", "Wilson dos Santos", "2000-05-22", 5) 
+    Paciente.AdicionaPaciente("18229735111", "Juliana Freitas", "1950-12-21", 4) 
+    Paciente.AdicionaPaciente("18229735122", "Daniel dos Santos", "1942-07-23", 2) 
 
 
     # Testes
@@ -98,7 +98,7 @@ def preenche_banco_inicialmente():
     TestesPacientes.AdicionaTestesPacientes("2020-11-24", 0, 5, '18229735114')
     TestesPacientes.AdicionaTestesPacientes("2020-10-17", 0, 1, '18229735114')
 
-    # Sintomas # Mudar esse tipo físico ou psico pra gravidade do sintoma
+    # Sintomas 
     Sintomas.AdicionaSintomas("Febre", "Físico")
     Sintomas.AdicionaSintomas("Tosse seca", "Físico")
     Sintomas.AdicionaSintomas("Cansaço", "Físico")
