@@ -202,8 +202,14 @@ WHERE SintomasPacientes.CpfPaciente = CPF AND Sintomas.Codigo = SintomasPaciente
 
 DROP VIEW IF EXISTS vw_hospitais_cheios;
 
-
 CREATE VIEW vw_hospitais_cheios
 AS
 SELECT Codigo, Nome, Cep FROM Hospitais
 WHERE QtdLeitosDisponiveis = 0;
+
+DROP VIEW IF EXISTS vw_grupo_risco;
+
+CREATE VIEW vw_grupo_risco
+AS
+SELECT Cpf, Nome FROM Pacientes
+WHERE (2020 - YEAR(DataNascimento) >= 60) 

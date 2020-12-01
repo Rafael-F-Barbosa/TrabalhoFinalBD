@@ -33,13 +33,13 @@ from aux import preenche_banco_inicialmente
 # Coisas do Relatório 
 # - Introdução 
 # - 5 Consultas envolvendo 3 tabelas
-# - 5 Avaliações das formas normais
+# - 5 Avaliações das formas normais (feito)
 
 # ------------------------------------------------------------------------- 
 
 
 
-# preenche_banco_inicialmente()
+#preenche_banco_inicialmente()
 main()
 
 

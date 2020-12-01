@@ -76,6 +76,8 @@ def preenche_banco_inicialmente():
     Paciente.AdicionaPaciente("28229735118", "Marquinhos Lightning", "1998-08-21", 3) # tentando inserir o mesmo CPF pra testar erros
     Paciente.AdicionaPaciente("18229735113", "Mariana Fagundes", "1978-12-21", 4) # tentando inserir o mesmo CPF pra testar erros
     Paciente.AdicionaPaciente("18229735119", "Wilson dos Santos", "2000-05-22", 5) # tentando inserir o mesmo CPF pra testar erros
+    Paciente.AdicionaPaciente("18229735111", "Juliana Freitas", "1950-12-21", 4) # tentando inserir o mesmo CPF pra testar erros
+    Paciente.AdicionaPaciente("18229735122", "Daniel dos Santos", "1942-07-23", 2) # tentando inserir o mesmo CPF pra testar erros
 
 
     # Testes
