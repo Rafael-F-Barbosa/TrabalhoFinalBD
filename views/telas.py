@@ -7,6 +7,7 @@ from views.atualizar_relacoes import *
 import views.deletar as deletar
 
 
+
 #---------------------------------------------------------------------------------------
 
 # Abre tela inicial, apresentando o nome do trabalho e a disciplina
@@ -329,8 +330,7 @@ def dec_deletar_dados():
         lista = RegioesAdmin.dicio
         tabela = "RegiaoAdmin"
     elif(decisao == 2):
-        lista = SituacaoAtual.dicio
-        tabela = "SituacaoAtual"
+        return deletar.DeletarSituacaoAtual()
     elif(decisao == 3):
         lista = Acoes.dicio
         tabela = "Acoes"
@@ -389,25 +389,17 @@ def dec_deletar_relacoes():
     if(decisao == 0):
         return False
     elif(decisao == 1):
-        lista = ParentePaciente.dicio
-        tabela = "ParentePaciente"
+        return deletar.DeletarParentePaciente()
     elif(decisao == 2):
-        lista = ProfAtendePaciente.dicio
-        tabela = "ProfAtendePaciente"
+        return deletar.DeletarProfPaciente()
     elif(decisao == 3):
-        lista = ProfTrabalhaHospital.dicio
-        tabela = "ProfTrabalhaHospital"
+        return deletar.DeletarProfHospital()
     elif(decisao == 4):
-        lista = MedicacoesPacientes.dicio
-        tabela = "MedicacoesPacientes"
+        return deletar.DeletarMedicacoesPacientes()
     elif(decisao == 5):
-        lista = SintomasPacientes.dicio
-        tabela = "SintomasPacientes"
+        return deletar.DeletarSintomasPacientes()
     elif(decisao == 6):
-        lista = TestesPacientes.dicio
-        tabela = "TestesPacientes"
-
-    deletar.Deletar(tabela, lista)
+        return deletar.DeletarTestesPacientes()
 
     # Retorna ao menu principal
     return False

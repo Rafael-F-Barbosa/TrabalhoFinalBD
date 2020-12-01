@@ -105,3 +105,21 @@ def ChamaProcedure(nome, cpf):
         a = input("")
     
     return False
+
+def DeletaRelacao(tabela, coluna1, valor1, coluna2, valor2):
+    # Conexão ao banco de dados
+    conn = CreatePool().get_connection()
+    cursor = conn.cursor()
+
+    # Criando SQL
+    sql = "DELETE FROM "+ tabela + " WHERE " + coluna1 + " = '" + valor1 + "' AND " + coluna2 + " = " + valor2
+    #print('Operacao: ', sql)
+    #a = input("")
+
+    # Deletando da Tabela
+    try: 
+        cursor.execute(sql)
+        conn.commit()
+    except Error as err:
+        print("Não foi possível realizar a operação: {}".format(err))
+        a = input("")

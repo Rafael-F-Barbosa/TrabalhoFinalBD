@@ -282,10 +282,10 @@ def RelatorioPaciente():
             lista_editada = []
             for x in range(len(lista2)):
                 lista_editada.append(list(lista2[x]))
-            if (int(lista_editada[x][1]) == 0):
-                lista_editada[x][1] = 'Negativo'
-            else:
-                lista_editada[x][1] = 'Positivo'
+                if (int(lista_editada[x][2]) == 0):
+                    lista_editada[x][2] = 'Negativo'
+                else:
+                    lista_editada[x][2] = 'Positivo'
                 
             formata_tabela(lista_editada, ['Nome', 'Data', 'Resultado'])
 
