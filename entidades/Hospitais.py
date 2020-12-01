@@ -3,7 +3,7 @@ import util.OpDb as OpDb
 #Cria a Classe Hospitais
 class Hospitais:
     #Lista com todos os atributos de Hopitais
-    dicio = ['Codigo', 'Nome', 'Cep', 'QtdLeitosDisponiveis', 'QtdLeitosOcupados', 'NumeroPessoasComCovid', 'CodRegiao']
+    dicio = ['Codigo', 'Cep', 'Nome', 'QtdLeitosDisponiveis', 'QtdLeitosOcupados', 'NumeroPessoasComCovid', 'CodRegiao']
 
     def __init__(self, nome, cep, qtdLeitosDisponiveis, qtdLeitosOcupados, numeroPessoasComCovid, codRegiao):
         self.nome = nome
