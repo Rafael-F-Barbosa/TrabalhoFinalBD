@@ -5,7 +5,7 @@ def CreatePool():
     dbconfig = {
         "host": "localhost",
         "user": "root",
-        "password": "gera2908",
+        "password": "Qaz1234!",
         "database": "BancoCovid",
     }
     # Cria conecção de pool e retorna esta ao usuário
